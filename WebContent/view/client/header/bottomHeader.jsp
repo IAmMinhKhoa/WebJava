@@ -20,11 +20,19 @@
                   <p>daily<strong>Shop</strong> <span>Your Shopping Partner</span></p>
                 </a>-->
                 <!-- img based logo -->
-                <a href="${pageContext.request.contextPath}/"><img src="${url}/images/logo.png" alt="logo img" width="100%"></a> 
+                <a href="${pageContext.request.contextPath}/"><img src="${url}/images/logo.jpg" alt="logo img" width="100%"></a> 
+              </div>
+              <div class="aa-searchbox-area">
+              	<a class="aa-searchbox">
+	                <form action="${pageContext.request.contextPath}/view/client/product/search" method="GET">
+	                  <input type="text" name="s" id="" placeholder="Tìm kiếm sản phẩm..">
+	                 <button class="search-box"><span class="fa fa-search"></span></button>
+	                </form>
+	             </a>
               </div>
               <!-- / logo  -->
               <!-- Shipping service -->
-              <div class="aa-shipping-box">
+              <!-- <div class="aa-shipping-box">
                   <a class="aa-shipping-boxsmall">
                       <span class="aa-shipping-boxsmall-icon fas fa-shipping-fast"></span>
                       <span class="aa-shipping-box-text">
@@ -49,7 +57,7 @@
                       </span>
                       
                   </a>
-              </div>
+              </div>-->
               
               
               
@@ -58,7 +66,7 @@
               <div class="aa-cartbox">
                 <a class="aa-cart-link" href="${pageContext.request.contextPath}/view/client/cart">
                   <span class="fas fa-cart-arrow-down"></span>
-                  <span class="aa-cart-title">GIỎ HÀNG</span>
+                  <span class="aa-cart-title">Giỏ Hàng</span>
                  
                   <c:if test="${length_order != NULL}">
                   	<span class="aa-cart-notify">${length_order}</span>
@@ -91,7 +99,7 @@
                 </div>
               </div>
               <!-- / cart box -->
-                         
+   
             </div>
           </div>
         </div>

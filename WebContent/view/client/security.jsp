@@ -5,15 +5,11 @@
   <jsp:include page = "./header/mainHeader.jsp" flush = "true" />
   
   <section id="aa-catg-head-banner">
-   <img src="${pageContext.request.contextPath}/view/client/assets/images/banner_tc.jpg" alt="banner sản phẩm">
    <div class="aa-catg-head-banner-area">
      <div class="container">
       <div class="aa-catg-head-banner-content">
-        <h2>Chính sách bảo mật</h2>
-        <ol class="breadcrumb">
-          <li><a href="${pageContext.request.contextPath}/">Trang chủ</a></li>
-          <li style="color:#fff">Chính sách</li>         
-        </ol>
+         <a href="${pageContext.request.contextPath}/">Trang chủ</a>	 
+         <strong>/ Giới thiệu</strong>
       </div>
      </div>
    </div>

@@ -3,7 +3,7 @@
     Created on : May 5, 2020, 10:57:00 PM
     Author     : LENOVO
 --%>
-<!-- cc -->
+
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%@ taglib uri = "http://java.sun.com/jsp/jstl/core" prefix = "c" %>
 <c:url value = "/view/client/assets" var="url"/>
@@ -23,7 +23,7 @@
           <div class="aa-promo-area">
             <div class="row">
               <!-- promo left -->
-              <div class="col-md-5 no-padding">                
+              <!-- <div class="col-md-5 no-padding">                
                 <div class="aa-promo-left">
                   <div class="aa-promo-banner">                    
                     <img src="${url}/images/section1_tc.jpg" alt="dâu tây Đà Lạt">                    
@@ -33,44 +33,56 @@
                     </div>
                   </div>
                 </div>
-              </div>
+              </div> -->
               <!-- promo right -->
-              <div class="col-md-7 no-padding">
+              <div class="aa-promotion">
                 <div class="aa-promo-right">
                   <div class="aa-single-promo-right">
-                    <div class="aa-promo-banner">                      
-                      <img src="${url}/images/section2_tc.jpg" alt="hạt tiêu daklak">                      
-                      <div class="aa-prom-content">
-                        <span>Sản Phẩm độc quyền</span>
-                        <h4>Hạt tiêu DakLak</h4>                        
-                      </div>
+                    <div>                          
+                    	<a href="/do-an-java/view/client/product-id?id=1">
+                    		<div class="aa-promo-banner">
+	                     	 	<img src="${url}/images/section2_tc.png" alt="">       
+                    		</div>                
+	                    </a>                	
+                    	<div class="aa-promo-text">
+	                      	<span>Đồ chơi búp bê</span>                                    
+                    	</div>
                     </div>
                   </div>
                   <div class="aa-single-promo-right">
-                    <div class="aa-promo-banner">                      
-                      <img src="${url}/images/section3_tc.jpg" alt="img">                      
-                      <div class="aa-prom-content">
-                        <span>Sản phẩm nhập khẩu</span>
-                        <h4>Cherry Mỹ</h4>                        
-                      </div>
+                    <div>                          
+                    	<a href="/do-an-java/view/client/product-id?id=2">
+                    		<div class="aa-promo-banner">
+	                     	 	<img src="${url}/images/section3_tc.png" alt="">       
+                    		</div>                
+	                    </a>                	
+                    	<div class="aa-promo-text">
+	                      	<span>Đồ chơi điều khiển</span>                                    
+                    	</div>
                     </div>
                   </div>
                   <div class="aa-single-promo-right">
-                    <div class="aa-promo-banner">                      
-                      <img src="${url}/images/section4_tc.jpg" alt="img">                      
-                      <div class="aa-prom-content">
-                        <span>Giảm giá 25%</span>
-                        <h4>Tinh Dầu Sả</h4>                        
-                      </div>
+                    <div>                          
+                    	<a href="/do-an-java/view/client/product-id?id=3">
+                    		<div class="aa-promo-banner">
+	                     	 	<img src="${url}/images/section4_tc.png" alt="">       
+                    		</div>                
+	                    </a>                	
+                    	<div class="aa-promo-text">
+	                      	<span>Đồ chơi lắp ráp</span>                                    
+                    	</div>
                     </div>
                   </div>
                   <div class="aa-single-promo-right">
-                    <div class="aa-promo-banner">                      
-                      <img src="${url}/images/section5_tc.jpg" alt="img">                      
-                      <div class="aa-prom-content">
-                        <span>Sản phẩm độc quyền</span>
-                        <h4>Mật ong rừng Tây Bắc</h4>                        
-                      </div>
+                    <div>                          
+                    	<a href="/do-an-java/view/client/product-id?id=4">
+                    		<div class="aa-promo-banner">
+	                     	 	<img src="${url}/images/section5_tc.png" alt="">       
+                    		</div>                
+	                    </a>                	
+                    	<div class="aa-promo-text">
+	                      	<span>Đồ chơi trí tuệ</span>                                    
+                    	</div>
                     </div>
                   </div>
                 </div>
@@ -92,10 +104,10 @@
               <div class="aa-product-inner">
                 <!-- start prduct navigation -->
                  <ul class="nav nav-tabs aa-products-tab">
-                    <li class="active"><a href="#raucu" data-toggle="tab">Rau Củ Quả</a></li>
-                    <li><a href="#hat" data-toggle="tab">Các Loại Hạt</a></li>
-                    <li><a href="#traicay" data-toggle="tab">Trái Cây </a></li>
-                    <li><a href="#matong" data-toggle="tab">Mật Ong & Tinh Dầu</a></li>
+                    <li class="active"><a href="#robot" data-toggle="tab">Robot</a></li>
+                    <li><a href="#thubong" data-toggle="tab">Thú Bông</a></li>
+                    <li><a href="#hoctap" data-toggle="tab">Học tập </a></li>
+                    <li><a href="#vandong" data-toggle="tab">Vận động</a></li>
                   </ul>
                   <!-- Tab panes -->
                   <div class="tab-content">
@@ -277,7 +289,7 @@
         <div class="col-md-12">        
           <div class="row">
             <div class="aa-banner-area">
-            <a href="#"><img src="${url}/images/banner_tc.jpg" alt="banner trang chủ"></a>
+            <a href="#"><img src="${url}/images/banner_tc.png" alt="banner trang chủ"></a>
           </div>
           </div>
         </div>

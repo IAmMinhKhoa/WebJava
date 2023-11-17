@@ -8,7 +8,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">    
-    <title>Nông sản 24h - Sự lựa chọn tin cậy</title>
+    <title>Cửa hàng bán đồ chơi trẻ em - Sự lựa chọn tin cậy</title>
     
     <!-- Font awesome -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.0/css/all.css"
@@ -27,7 +27,7 @@
     <!-- price picker slider -->
     <link rel="stylesheet" type="text/css" href="${url}/css/nouislider.css">
     <!-- Theme color -->
-    <link id="switcher" href="${url}/css/theme-color/default-theme.css" rel="stylesheet">
+    <link id="switcher" href="${url}/css/theme-color/coral.css" rel="stylesheet">
     
     <!-- Top Slider CSS -->
     <link href="${url}/css/sequence-theme.modern-slide-in.css" rel="stylesheet" media="all">
