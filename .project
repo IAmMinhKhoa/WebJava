@@ -28,11 +28,4 @@
 		<nature>org.eclipse.jdt.core.javanature</nature>
 		<nature>org.eclipse.wst.jsdt.core.jsNature</nature>
 	</natures>
-	<linkedResources>
-		<link>
-			<name>WebContent/WEB-INF/lib/sqljdbc4.jar</name>
-			<type>1</type>
-			<location>C:/Users/LENOVO/Downloads/some-jdbc-drivers/some-jdbc-drivers/sqljdbc4.jar</location>
-		</link>
-	</linkedResources>
 </projectDescription>
