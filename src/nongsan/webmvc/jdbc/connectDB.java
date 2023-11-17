@@ -14,7 +14,8 @@ public class connectDB {
 		try {
 			Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
 			
-			String connString      ="jdbc:sqlserver://MYNAMEISKHOA\\MINHKHOA666:1433;databaseName=QLNS;useUnicode=true;characterEncoding=UTF-8;   trustServerCertificate=true";
+			//String connString      ="jdbc:sqlserver://MYNAMEISKHOA\\MINHKHOA666:1433;databaseName=QLNS;useUnicode=true;characterEncoding=UTF-8;   trustServerCertificate=true";
+			String connString      ="jdbc:sqlserver://DESKTOP-4LTEG87\\SQLEXPRESS:1433;databaseName=QLNS;useUnicode=true;characterEncoding=UTF-8;   trustServerCertificate=true";
 			String username = "sa";
 			String password = "123";
 			connection = DriverManager.getConnection(connString,username,password);
