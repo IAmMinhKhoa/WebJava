@@ -22,7 +22,7 @@
                   <a href="${pageContext.request.contextPath}/"><img src="${url}/images/logo_footer.png" alt="logo img" width="185px"></a> 
                   <ul class="aa-footer-nav">
 
-                    <li><p style="color:#888; text-align: justify; width: 95%">Là nơi chuyên buôn bán tất cả các mặt hàng về nông sản chất lượng. Chúng tôi luôn đặt tiêu chí về chất lượng và uy tín lên hàng đầu.</p></li>
+                    <li><p style="color:#888; text-align: justify; width: 95%">Là nơi chuyên buôn bán tất cả các mặt hàng về đồ chơi trẻ em. Chúng tôi luôn đặt tiêu chí về chất lượng , an toàn sản phẩm và uy tín lên hàng đầu.</p></li>
                     <li><img src="${pageContext.request.contextPath}/view/client/assets/images/dadangky.png" alt="logo img" width="40%"></li>
                   </ul>
                 </div>
@@ -46,7 +46,7 @@
                     <address>
                       <p>Khu phố 6 - P.Linh Trung - Q.Thủ Đức - TP HCM</p>
                       <p><span class="fa fa-phone"></span>037.7026.186</p>
-                      <p><span class="fa fa-envelope"></span>webnongsan@gmail.com</p>
+                      <p><span class="fa fa-envelope"></span>webbandochoi@gmail.com</p>
                     </address>
                     <div class="aa-footer-social">
                       <a href="#"><span class="fab fa-facebook"></span></a>

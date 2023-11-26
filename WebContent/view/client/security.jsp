@@ -19,7 +19,7 @@
       <div class="row">
       	<div>
       		<h1 style ="text-align: center; color: red;">Chính Sách Bảo Mật</h1>
-      		<strong>Cám ơn quý khách đã truy cập vào website Nông Sản 24h</strong><br><br>
+      		<strong>Cám ơn quý khách đã truy cập vào website cửa hàng bán đồ chơi trẻ em</strong><br><br>
       		<p>Chúng tôi tôn trọng và cam kết sẽ bảo mật những thông tin mang tính riêng tư của bạn. 
       		Xin vui lòng đọc bản Chính sách bảo mật dưới đây để hiểu hơn những cam kết mà chúng tôi thực 
       		hiện nhằm tôn trọng và bảo vệ quyền lợi của người truy cập.</p>
@@ -35,7 +35,7 @@
       		bạn đang ẩn danh và chúng tôi không thể biết bạn là ai nếu bạn không đăng nhập vào tài khoản của mình.</p>
       		<strong>1. Thu thập thông tin cá nhân</strong>
       		<p>
-      		Chúng tôi sẽ thu thập nhiều thông tin khác nhau của quý khách khi bạn muốn đặt hàng trên website thegioinongsan.net<br><br>
+      		Chúng tôi sẽ thu thập nhiều thông tin khác nhau của quý khách khi bạn muốn đặt hàng trên website<br><br>
       		
 			Chúng tôi thu thập, lưu trữ và xử lý thông tin của bạn cho quá trình mua hàng và cho những thông báo sau này, và để cung cấp dịch vụ. 
 			Chúng tôi không giới hạn thông tin cá nhân: danh hiệu, tên, giới tính, ngày sinh, email, địa chỉ, địa chỉ giao hàng, số điện thoại, fax, 

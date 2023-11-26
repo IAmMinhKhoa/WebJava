@@ -15,15 +15,12 @@
 <!--  content -->
     <!-- catg header banner section -->
   <section id="aa-catg-head-banner">
-   <img src="${pageContext.request.contextPath}/view/client/assets/images/checkout-banner.png" alt="banner thanh toán">
-    <div class="aa-catg-head-banner-area">
+   <div class="aa-catg-head-banner-area">
+	 <h2 style="text-align:center;">Thanh toán</h2>
      <div class="container">
       <div class="aa-catg-head-banner-content">
-        <h2>Thanh toán</h2>
-        <ol class="breadcrumb">
-          <li><a href="${pageContext.request.contextPath}/">Trang chủ</a></li>
-          <li style="color:#fff">Thông tin thanh toán</li>
-        </ol>
+         <a href="${pageContext.request.contextPath}/">Trang chủ</a>	 
+         <strong>/ Thông tin thanh toán</strong>
       </div>
      </div>
    </div>

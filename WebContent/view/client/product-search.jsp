@@ -14,15 +14,12 @@
 <!--  content -->
   <!-- catg header banner section -->
   <section id="aa-catg-head-banner">
-   <img src="${pageContext.request.contextPath}/view/client/assets/images/banner-product.png" alt="banner sản phẩm">
    <div class="aa-catg-head-banner-area">
+	 <h2 style="text-align:center;">Tìm kiếm sản phẩm</h2>
      <div class="container">
       <div class="aa-catg-head-banner-content">
-        <h2>Tìm kiếm sản phẩm</h2>
-        <ol class="breadcrumb">
-          <li><a href="${pageContext.request.contextPath}/home">Trang chủ</a></li>         
-          <li style="color:#fff">Kết quả tìm kiếm</li>
-        </ol>
+         <a href="${pageContext.request.contextPath}/">Trang chủ</a>	 
+         <strong>/ Kết quả tìm kiếm</strong>
       </div>
      </div>
    </div>

@@ -14,15 +14,11 @@
 <!--  content -->
  <!-- catg header banner section -->
   <section id="aa-catg-head-banner">
-  <img src="${pageContext.request.contextPath}/view/client/assets/images/archive-banner.png" alt="banner blog">
-    <div class="aa-catg-head-banner-area">
+   <div class="aa-catg-head-banner-area">
      <div class="container">
       <div class="aa-catg-head-banner-content">
-        <h2>Đăng ký</h2>
-        <ol class="breadcrumb">
-          <li><a href="${pageContext.request.contextPath}/">Trang chủ</a></li>                   
-          <li style="color:#fff">Đăng ký tài khoản</li>
-        </ol>
+         <a href="${pageContext.request.contextPath}/">Trang chủ</a>	 
+         <strong>/ Đăng ký</strong>
       </div>
      </div>
    </div>

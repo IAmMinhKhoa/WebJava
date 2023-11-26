@@ -288,10 +288,10 @@ jQuery(function($){
      
     //Click event to scroll to top
 
-    /*jQuery('.scrollToTop').click(function(){
+    jQuery('.scrollToTop').click(function(){
       $('html, body').animate({scrollTop : 0},800);
       return false;
-    });*/
+    });
   
   /* ----------------------------------------------------------- */
   /*  11. PRELOADER
