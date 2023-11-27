@@ -33,7 +33,7 @@
           <div class="aa-product-catg-content">
            
             <div class="aa-product-catg-body">
-              <ul class="aa-product-catg">
+              <ul class="	">
                 <!-- start single product item -->
                 <c:if test="${empty productlist}">
                  	<p style="margin-left: 30px">Chưa có sản phẩm!</p>
