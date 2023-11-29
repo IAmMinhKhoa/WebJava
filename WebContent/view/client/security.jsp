@@ -18,6 +18,14 @@
     <div class="container">
       <div class="row">
       	<div>
+      	<div id="range-price">
+					<span class="range-left">
+						<input id="input-with-keypress-0" type="text" value="">
+					</span>
+					<span class="range-right">
+						<input id="input-with-keypress-1" type="text" value="">
+					</span>
+				</div>
       		<h1 style ="text-align: center; color: red;">Chính Sách Bảo Mật</h1>
       		<strong>Cám ơn quý khách đã truy cập vào website cửa hàng bán đồ chơi trẻ em</strong><br><br>
       		<p>Chúng tôi tôn trọng và cam kết sẽ bảo mật những thông tin mang tính riêng tư của bạn. 

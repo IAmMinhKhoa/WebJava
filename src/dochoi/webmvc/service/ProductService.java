@@ -19,7 +19,11 @@ public interface ProductService {
 	List<Product> getProductById(int id);
 
 	List<Product> searchByName(String productName);
+	
+	List<Product> searchByPrice(String pricemin, String pricemax);
 
+	List<Product> searchByPriceMin(String pricemin);
+	
 	List<Product> getProductByIdCate(int idCate);
 
 }

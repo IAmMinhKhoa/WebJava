@@ -24,7 +24,7 @@
               </div>
               <div class="aa-searchbox-area">
               	<a class="aa-searchbox">
-	                <form action="${pageContext.request.contextPath}/view/client/product/search" method="GET">
+	                <form action="${pageContext.request.contextPath}/view/client/product/search-name" method="GET">
 	                  <input type="text" name="s" id="" placeholder="Tìm kiếm sản phẩm..">
 	                 <button class="search-box"><span class="fa fa-search"></span></button>
 	                </form>

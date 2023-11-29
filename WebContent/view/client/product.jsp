@@ -88,7 +88,22 @@
               </ul>
             </div>
             <!-- single sidebar -->
-
+			<div class="aa-sidebar-widget">
+              <h3>Lọc giá</h3>
+	          <form action="${pageContext.request.contextPath}/view/client/product/search-price" method="GET">
+	              <div id="range-price">
+							<span class="range-left">
+								<input id="input-with-keypress-0" type="number" value="${param.pricemin}"  name="pricemin">
+							</span>
+							<span class="range-right">
+								<input id="input-with-keypress-1" type="number" value="${param.pricemax}"  name="pricemax">
+							</span>
+					</div>
+					<div class="btn-container">
+						<button class="btn-filter-price">Xem kết quả</button>
+					</div>	
+				</form>
+            </div>
             <!-- single sidebar -->
             <div class="aa-sidebar-widget">
               <h3>Sản phẩm gần đây</h3>

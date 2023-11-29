@@ -63,6 +63,16 @@ public class ProductServiceImpl implements ProductService {
 	public List<Product> searchByName(String productName) {
 		return productDao.searchByName(productName);
 	}
+	
+	@Override
+	public List<Product> searchByPrice(String pricemin, String pricemax) {
+		return productDao.searchByPrice(pricemin, pricemax);
+	}
+	
+	@Override
+	public List<Product> searchByPriceMin(String pricemin) {
+		return productDao.searchByPriceMin(pricemin);
+	}
 
 	@Override
 	public List<Product> getProductByIdCate(int idCate) {

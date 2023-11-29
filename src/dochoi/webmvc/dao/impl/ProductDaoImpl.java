@@ -216,7 +216,72 @@ public class ProductDaoImpl extends connectDB implements ProductDao {
 		return productList;
 	}
 
-	
-	
+	@Override
+	public List<Product> searchByPrice(String pricemin, String pricemax) {
+		List<Product> productList = new ArrayList<Product>();
+		String sql = "SELECT * FROM product WHERE CAST(price - (price * discount / 100) AS INTEGER) >= ? AND  CAST(price - (price * discount / 100) AS INTEGER) <= ?";
+		Connection conn = connectDB.getConnect();
 
+		try {
+			PreparedStatement ps = conn.prepareStatement(sql);
+			ps.setString(1, pricemin);
+			ps.setString(2, pricemax);
+			ResultSet rs = ps.executeQuery();
+
+			while (rs.next()) {
+				Product product = new Product();
+				product.setId(rs.getString("id"));
+				product.setCatalog_id(rs.getString("catalog_id"));
+				product.setName(rs.getString("name"));
+				product.setPrice(rs.getString("price"));
+				product.setStatus(rs.getString("status"));
+				product.setDescription(rs.getString("description"));
+				product.setContent(rs.getString("content"));
+				product.setDiscount(rs.getString("discount"));
+				product.setImage_link(rs.getString("image_link"));
+				product.setCreated(rs.getString("created"));
+				productList.add(product);
+			}
+
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+
+		return productList;
+	}
+	
+	@Override
+	public List<Product> searchByPriceMin(String pricemin) {
+		List<Product> productList = new ArrayList<Product>();
+		String sql = "SELECT * FROM product WHERE CAST(price - (price * discount / 100) AS INTEGER) >= ?";
+		Connection conn = connectDB.getConnect();
+
+		try {
+			PreparedStatement ps = conn.prepareStatement(sql);
+			ps.setString(1, pricemin);
+			ResultSet rs = ps.executeQuery();
+
+			while (rs.next()) {
+				Product product = new Product();
+				product.setId(rs.getString("id"));
+				product.setCatalog_id(rs.getString("catalog_id"));
+				product.setName(rs.getString("name"));
+				product.setPrice(rs.getString("price"));
+				product.setStatus(rs.getString("status"));
+				product.setDescription(rs.getString("description"));
+				product.setContent(rs.getString("content"));
+				product.setDiscount(rs.getString("discount"));
+				product.setImage_link(rs.getString("image_link"));
+				product.setCreated(rs.getString("created"));
+				productList.add(product);
+			}
+
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+
+		return productList;
+	}
 }

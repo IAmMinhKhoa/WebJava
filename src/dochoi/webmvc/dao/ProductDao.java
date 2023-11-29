@@ -21,5 +21,8 @@ public interface ProductDao {
 
 	List<Product> searchByName(String productName);
 
+	List<Product> searchByPrice(String pricemin, String pricemax);
+	
+	List<Product> searchByPriceMin(String pricemin);
 
 }

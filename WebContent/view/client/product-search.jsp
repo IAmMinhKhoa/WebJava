@@ -59,17 +59,17 @@
 	                      <h4 class="aa-product-title"><a href="${pageContext.request.contextPath}/view/client/product-detail?id=${product.id}">${product.name}</a></h4>
 	                      
 	                    <c:choose>
-						<c:when test="${product.discount == 0}">
-	                      <span class="aa-product-price">${product.price} VNĐ</span><span class="aa-product-price"></span>
-	                    </c:when>
-	                    <c:otherwise>
-	                      <c:forEach items="${productlist1}" var="product1">
-	                      	<c:if test="${product1.id == product.id}">
-		                      <span class="aa-product-price">${product1.price} VNĐ</span>
-		                      <span class="aa-product-price"><del>${product.price} VNĐ</del></span>
-	                      </c:if>
-	                      </c:forEach>
-	                    </c:otherwise>
+							<c:when test="${product.discount == 0}">
+		                      <span class="aa-product-price">${product.price} VNĐ</span><span class="aa-product-price"></span>
+		                    </c:when>
+		                    <c:otherwise>
+		                      <c:forEach items="${productlist1}" var="product1">
+		                      	<c:if test="${product1.id == product.id}">
+			                      <span class="aa-product-price">${product1.price} VNĐ</span>
+			                      <span class="aa-product-price"><del>${product.price} VNĐ</del></span>
+		                      </c:if>
+		                      </c:forEach>
+		                    </c:otherwise>	
 	                     </c:choose>
 	                    
 	                    </figcaption>
@@ -97,7 +97,24 @@
               </c:forEach>                
               </ul>
             </div>
-          
+            
+            <!-- single sidebar -->
+          	<div class="aa-sidebar-widget">
+              <h3>Lọc giá</h3>
+	          <form action="${pageContext.request.contextPath}/view/client/product/search-price" method="GET">
+	              <div id="range-price">
+							<span class="range-left">
+								<input id="input-with-keypress-0" type="number" name="pricemin">
+							</span>
+							<span class="range-right">
+								<input id="input-with-keypress-1" type="number" name="pricemax">
+							</span>
+					</div>
+					<div class="btn-container">
+						<button class="btn-filter-price">Xem kết quả</button>
+					</div>	
+				</form>
+            </div>
 		
             <!-- single sidebar -->
             <div class="aa-sidebar-widget">

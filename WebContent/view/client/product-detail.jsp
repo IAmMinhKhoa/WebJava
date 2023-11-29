@@ -69,7 +69,7 @@
 	                    </c:otherwise>
 	                     </c:choose>
                    
-                      <p class="aa-product-avilability">Tình trạng: <span>
+                      <p class="aa-product-avilability">Tình trạng: <span class="status">
                       	<c:choose>
 			                        <c:when test="${detail_product.status == 1}"> 
 			                        	<c:out value="Còn hàng"/>
