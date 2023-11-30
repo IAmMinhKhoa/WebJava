@@ -34,13 +34,26 @@ public class UpdateCartController extends HttpServlet {
 		order.setSumPrice(0);
 		for(Item item: listItems)
 		{
-			item.setQty(Integer.parseInt(req.getParameter(item.getProduct().getId())));
-			item.setPrice((Double.parseDouble(item.getProduct().getPrice()) - Double.parseDouble(item.getProduct().getPrice())*(Double.parseDouble(item.getProduct().getDiscount())/100))*Double.parseDouble(req.getParameter(item.getProduct().getId())));
+			
+				item.setQty(Integer.parseInt(req.getParameter(item.getProduct().getId())));
+				item.setPrice((Double.parseDouble(item.getProduct().getPrice()) - Double.parseDouble(item.getProduct().getPrice())*(Double.parseDouble(item.getProduct().getDiscount())/100))*Double.parseDouble(req.getParameter(item.getProduct().getId())));
+			
+			
 			order.setSumPrice(order.getSumPrice() + item.getPrice());
+			
+			System.out.println(order.getSumPrice());
 		}
 		order.setItems(listItems);
 		session.setAttribute("order", order);
 		session.setAttribute("sumprice", df.format(order.getSumPrice()));
+		
+		
+		/*
+		 * if (session != null) { session.removeAttribute("order"); //remove session
+		 * session.removeAttribute("sumprice"); //remove session
+		 * session.removeAttribute("length_order"); //remove session }
+		 */
+		
 		resp.sendRedirect(req.getContextPath() + "/view/client/cart");
 	}
 }

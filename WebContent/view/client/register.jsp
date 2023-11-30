@@ -40,9 +40,9 @@
                     <label for="">Họ tên<span>*</span></label>
                     <input type="text" placeholder="Name" name="name" required>   
                      <label for="">Email <span>*</span></label>
-                    <input type="text" placeholder="useremail@gmail.com" name="email" required>
+                    <input type="email" placeholder="useremail@gmail.com" name="email" required>
                     <label for="">Số điện thoại<span>*</span></label>
-                    <input type="text" placeholder="Số điện thoại" name="phone" required>   
+                    <input type="text" placeholder="Số điện thoại" name="phone"  pattern="[0-9]+" required>   
                      <label for="">Username<span>*</span></label>
                     <input type="text" placeholder="Username" name="username" required>
                     <label for="">Mật khẩu<span>*</span></label>  
