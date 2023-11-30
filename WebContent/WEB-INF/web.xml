@@ -302,25 +302,6 @@
        <url-pattern>/view/client/product-detail</url-pattern>
    </servlet-mapping>	
 
-   <servlet>
-       <servlet-name>UserInfo</servlet-name>
-       <servlet-class>dochoi.webmvc.controller.InformationController</servlet-class>
-   </servlet>
- 
-   <servlet-mapping>
-       <servlet-name>UserInfo</servlet-name>
-       <url-pattern>/view/client/account</url-pattern>
-   </servlet-mapping>
-   
-      <servlet>
-       <servlet-name>UpdateAccount</servlet-name>
-       <servlet-class>dochoi.webmvc.controller.UpdateAccountController</servlet-class>
-   </servlet>
- 
-   <servlet-mapping>
-       <servlet-name>UpdateAccount</servlet-name>
-       <url-pattern>/view/client/update-account</url-pattern>
-   </servlet-mapping>
 
    <servlet>
        <servlet-name>ProductListClient</servlet-name>
@@ -351,16 +332,6 @@
    <servlet-mapping>
        <servlet-name>ProductSearchByName</servlet-name>
        <url-pattern>/view/client/product/search-name</url-pattern>
-   </servlet-mapping>
-   
-   <servlet>
-       <servlet-name>ProductSearchByPrice</servlet-name>
-       <servlet-class>dochoi.webmvc.controller.ProductSeachByPriceController</servlet-class>
-   </servlet>
- 
-   <servlet-mapping>
-       <servlet-name>ProductSearchByPrice</servlet-name>
-       <url-pattern>/view/client/product/search-price</url-pattern>
    </servlet-mapping>
 
 	

@@ -1406,8 +1406,15 @@ a.aa-product-img img {
 }
 #quick-view-modal .modal-content .aa-product-view-content .aa-price-block .aa-product-avilability {
   position: absolute;
+/*  font-size: 140px;
+  font-weight: bold;*/
   right: 0;
   top: 0;
+}
+
+#Count_Quantity{
+	font-size: 20px;
+  font-weight: bold;
 }
 #quick-view-modal .modal-content .aa-product-view-content .aa-prod-view-size a {
   border: 1px solid #ddd;
@@ -1995,6 +2002,10 @@ a.aa-product-img img {
   -o-transition: all 0.5s;
   transition: all 0.5s;
 }
+
+
+
+
 #aa-product-category .aa-sidebar .aa-sidebar-widget .tag-cloud {
   display: block;
 }
@@ -2782,7 +2793,7 @@ a.aa-product-img img {
 /*---- Login form ----*/
 
 .aa-login-form input[type="text"],
-.aa-login-form input[type="password"] {
+.aa-login-form input[type="password"],.aa-login-form input[type="email"] {
   border: 1px solid #ccc;
   font-size: 16px;
   height: 40px;
