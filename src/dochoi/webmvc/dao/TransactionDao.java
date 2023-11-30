@@ -17,5 +17,7 @@ public interface TransactionDao {
  
 	List<Transactions> getAll(); 
 	
+	List<Transactions> getByUsername(String username); 
+	
 	
 }

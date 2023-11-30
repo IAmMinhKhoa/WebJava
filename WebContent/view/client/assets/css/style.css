@@ -3635,11 +3635,18 @@ INFO  PAGE
     border-top: 1px solid #cccc;
 }
 
-.customer-table-wrap .customer-table-bg {
+.customer-table-wrapp {
+    padding: 8px 0;
+    margin: 0;
+    padding-top: 20px;
+    border-top: 1px solid #cccc;
+}
+
+.customer-table-wrap .customer-table-bg, .customer-table-wrapp .customer-table-bg {
     background: #fff;
 }
 
-.customer-table-wrap .title-detail {
+.customer-table-wrap .title-detail, .customer-table-wrapp .title-detail {
     text-transform: uppercase;
     font-size: 15px;
     font-weight: 700;
@@ -3707,6 +3714,14 @@ table.table-customers thead th, table.table-customers tr td {
 .mb-3, .my-3 {
     margin-bottom: 1rem!important;
 }
+
+    .table-customers {
+        width: 100%;
+    }
+
+    .customers th {
+        width: 25%;
+    }
 
 label {
     display: inline-block;

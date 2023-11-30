@@ -63,15 +63,21 @@
                        	</c:choose>
                           
                           </td>
-                          <td>
-                          	  <c:choose>
-	                        <c:when test="${order.status == NULL}"> 
-	                        	<c:out value="Chưa thanh toán"/>
-	                       	</c:when>
-	                       	<c:otherwise>
-						        <c:out value="Đã thanh toán"/>
-						    </c:otherwise>
-                       	</c:choose>
+                          <td>    
+	                         <c:choose>
+		                        <c:when test="${order.status == 1}">
+		                        	<c:out value="Đang chờ xác nhận"/>
+		                       	</c:when>
+		                       	<c:when test="${order.status == 2}">
+		                        	<c:out value="Đang chuẩn bị đơn hàng"/>
+		                       	</c:when>
+		                       	<c:when test="${order.status == 3}">
+		                        	<c:out value="Đang giao hàng"/>
+		                       	</c:when>
+		                       	<c:otherwise>
+							        <c:out value="Đã giao hàng"/>
+							    </c:otherwise>
+	                       	</c:choose>
                           </td>
                            <td>${order.created}</td>
                            

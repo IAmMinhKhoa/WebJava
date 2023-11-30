@@ -16,5 +16,7 @@ public interface TransactionService {
 	Transactions get(String name); 
  
 	List<Transactions> getAll(); 
+	
+	List<Transactions> getByUsername(String username); 
 
 }

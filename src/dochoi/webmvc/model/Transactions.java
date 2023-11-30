@@ -2,7 +2,7 @@ package dochoi.webmvc.model;
 
 public class Transactions {
 	private int id;
-	private String status;
+	private int status;
 	private String user_session;
 	private String user_name;
 	private String user_mail;
@@ -25,11 +25,11 @@ public class Transactions {
 		this.id = id;
 	}
 
-	public String getStatus() {
+	public int getStatus() {
 		return status;
 	}
 
-	public void setStatus(String status) {
+	public void setStatus(int status) {
 		this.status = status;
 	}
 

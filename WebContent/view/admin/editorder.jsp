@@ -65,8 +65,10 @@
 	                  <label for="input-2">Trạng thái</label>
 	                  <div>
 	                    <select class="form-control valid" id="input-6" name="order-status" required aria-invalid="false">
-	                        <option value="Đã thanh toán">Đã thanh toán</option>
-	                        <option value="Chưa thanh toán" selected="selected">Chưa thanh toán</option>
+	                        <option value="1" ${order.status == 1 ? 'selected="selected"' : ''}>Đang chờ xác nhận</option>
+	                        <option value="2" ${order.status == 2 ? 'selected="selected"' : ''}>Đang chuẩn bị đơn hàng</option>
+	                        <option value="3" ${order.status == 3 ? 'selected="selected"' : ''}>Đang giao hàng</option>
+	                        <option value="4" ${order.status == 4 ? 'selected="selected"' : ''}>Đã giao hàng</option>
 	                    </select>
 	                  </div>
 	                </div>

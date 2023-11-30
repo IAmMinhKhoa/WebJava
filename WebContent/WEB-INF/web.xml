@@ -312,7 +312,7 @@
        <url-pattern>/view/client/account</url-pattern>
    </servlet-mapping>
    
-      <servlet>
+   <servlet>
        <servlet-name>UpdateAccount</servlet-name>
        <servlet-class>dochoi.webmvc.controller.UpdateAccountController</servlet-class>
    </servlet>
@@ -320,6 +320,16 @@
    <servlet-mapping>
        <servlet-name>UpdateAccount</servlet-name>
        <url-pattern>/view/client/update-account</url-pattern>
+   </servlet-mapping>
+   
+   <servlet>
+       <servlet-name>InfoListOrder</servlet-name>
+       <servlet-class>dochoi.webmvc.controller.InfomationListOrderController</servlet-class>
+   </servlet>
+ 
+   <servlet-mapping>
+       <servlet-name>InfoListOrder</servlet-name>
+       <url-pattern>/view/client/account-list-order</url-pattern>
    </servlet-mapping>
    
       <servlet>

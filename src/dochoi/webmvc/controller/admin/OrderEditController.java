@@ -50,7 +50,7 @@ public class OrderEditController extends HttpServlet {
 		transactions.setMessage(req.getParameter("order-mess"));
 		transactions.setAmount(req.getParameter("order-amount"));
 		transactions.setPayment(req.getParameter("order-payment"));
-		transactions.setStatus(req.getParameter("order-status"));
+		transactions.setStatus(Integer.parseInt(req.getParameter("order-status")));
 		transactionService.edit(transactions);
 		resp.sendRedirect(req.getContextPath()+"/admin/order/list");
 

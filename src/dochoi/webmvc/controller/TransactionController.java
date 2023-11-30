@@ -54,6 +54,7 @@ public class TransactionController extends HttpServlet {
 		String tr_amount = req.getParameter("transaction_amount");
 		String tr_payment = req.getParameter("transaction_payment");
 		String tr_created = req.getParameter("transaction_created");
+		int tr_status = 1;
 
 		Transactions transaction = new Transactions();
 		transaction.setUser_session(tr_usersession);
@@ -65,6 +66,7 @@ public class TransactionController extends HttpServlet {
 		transaction.setAmount(tr_amount);
 		transaction.setPayment(tr_payment);
 		transaction.setCreated(tr_created);
+		transaction.setStatus(tr_status);
 	
 		transactionService.insert(transaction);
 

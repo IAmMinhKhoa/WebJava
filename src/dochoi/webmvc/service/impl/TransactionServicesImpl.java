@@ -50,7 +50,12 @@ public class TransactionServicesImpl implements TransactionService{
 	@Override 
 	public List<Transactions> getAll() { 
 		return transactionDao.getAll(); 
-	}	
+	}
+	
+	@Override
+	public List<Transactions> getByUsername(String username) {
+		return transactionDao.getByUsername(username); 
+	}
  
 
 }
