@@ -70,6 +70,12 @@ public class ProductServiceImpl implements ProductService {
 		return null;
 	}
 
+	@Override
+	public void edit_Quatity(int id, int newQuantity) {
+		productDao.edit_Quatity(id, newQuantity);
+		
+	}
+
 
 
 }

@@ -1,5 +1,6 @@
 package dochoi.webmvc.controller;
 
+import java.io.Console;
 import java.io.IOException;
 import java.text.DecimalFormat;
 import java.util.ArrayList;
@@ -35,6 +36,8 @@ public class ProductDetailController extends HttpServlet {
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		String id = req.getParameter("id");
 		Product detail_product = productService.get(Integer.parseInt(id));
+		
+		//System.out.println(detail_product.getQuantily());
 		req.setAttribute("detail_product", detail_product);
 		
 		List<Catalog> name_cate_of_product = cateService.getCateByProduct(Integer.parseInt(id));

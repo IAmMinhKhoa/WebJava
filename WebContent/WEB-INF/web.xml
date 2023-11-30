@@ -331,7 +331,7 @@
  
    <servlet-mapping>
        <servlet-name>ProductSearchByName</servlet-name>
-       <url-pattern>/view/client/product/search</url-pattern>
+       <url-pattern>/view/client/product/search-name</url-pattern>
    </servlet-mapping>
 
 	

@@ -21,5 +21,5 @@ public interface ProductDao {
 
 	List<Product> searchByName(String productName);
 
-
+	void edit_Quatity(int id, int newQuantity);
 }
