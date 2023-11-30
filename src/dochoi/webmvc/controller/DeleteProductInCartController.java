@@ -35,7 +35,6 @@ public class DeleteProductInCartController extends HttpServlet{
 			{
 				order.setSumPrice(order.getSumPrice() - item.getPrice());
 				listItems.remove(item);
-				session.setAttribute("length_order",(int)session.getAttribute("length_order")-1);
 				break;
 			}
 		}
@@ -45,7 +44,6 @@ public class DeleteProductInCartController extends HttpServlet{
 		if(order.getSumPrice() == 0)
 		{
 			session.setAttribute("sumprice", "0");
-			
 		} else {
 			session.setAttribute("sumprice", df.format(order.getSumPrice()));
 		}

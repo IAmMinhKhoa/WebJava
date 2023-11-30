@@ -21,5 +21,8 @@ public interface ProductDao {
 
 	List<Product> searchByName(String productName);
 
-	void edit_Quatity(int id, int newQuantity);
+	List<Product> searchByPrice(String pricemin, String pricemax);
+	
+	List<Product> searchByPriceMin(String pricemin);
+
 }

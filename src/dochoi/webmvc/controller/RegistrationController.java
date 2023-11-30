@@ -50,7 +50,7 @@ public class RegistrationController extends HttpServlet {
 			RequestDispatcher rd = request.getRequestDispatcher("/view/client/register.jsp");
 			rd.forward(request, response);
 		} else {
-			request.setAttribute("errMessage", "TÊN ĐĂNG NHẬP HOẶC EMAIL ĐÃ ĐƯỢC SỬ DỤNG. Hãy thử lại !!!");
+			request.setAttribute("errMessage", "Tạo tài khoản thất bại. Hãy thử lại !!!");
 			RequestDispatcher rd = request.getRequestDispatcher("/view/client/register.jsp");
 			rd.forward(request, response);
 		}

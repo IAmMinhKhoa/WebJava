@@ -11,9 +11,6 @@ public class Product {
 	private String image_link;
 	private String created;
 	private String discount;
-	
-	private int quantity;
-	
 	public Product() {}
 	public Product(String id, String catalog_id, String name, String price, String status, String description, String content,
 			String discount, String image_link, String created) {
@@ -89,15 +86,6 @@ public class Product {
 	public void setCreated(String product_day) {
 		this.created = product_day;
 	}
-	
-	public int getQuantity() {
-		return quantity;
-	}
-	public void setQuantity(int count) {
-		this.quantity = count;
-	}
-	
-	
 	@Override
 	public String toString() {
 		return "Product [id=" + id + ", catalog_id=" + catalog_id + ", name=" + name + ", price=" + price + ", status="

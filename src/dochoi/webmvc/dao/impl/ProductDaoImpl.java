@@ -17,7 +17,7 @@ public class ProductDaoImpl extends connectDB implements ProductDao {
 
 	@Override
 	public void insert(Product product) {
-		String sql = "INSERT INTO product(catalog_id, name, price, status, description, content, discount, image_link, created, quantity) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?,?)";
+		String sql = "INSERT INTO product(catalog_id, name, price, status, description, content, discount, image_link, created) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)";
 		new connectDB();
 		Connection con = connectDB.getConnect();
 
@@ -32,9 +32,6 @@ public class ProductDaoImpl extends connectDB implements ProductDao {
 			ps.setString(7, product.getDiscount());
 			ps.setString(8, product.getImage_link());
 			ps.setString(9, product.getCreated());
-			
-			ps.setInt(10, product.getQuantity());
-			
 			ps.executeUpdate();
 		} catch (SQLException e) {
 			e.printStackTrace();
@@ -43,7 +40,7 @@ public class ProductDaoImpl extends connectDB implements ProductDao {
 
 	@Override
 	public void edit(Product product) {
-		String sql = "UPDATE product SET name = ?, catalog_id = ?, price = ?, status = ?, description = ?, content = ?, discount = ?, image_link = ?, created = ?,quantity=? WHERE id = ?";
+		String sql = "UPDATE product SET name = ?, catalog_id = ?, price = ?, status = ?, description = ?, content = ?, discount = ?, image_link = ?, created = ? WHERE id = ?";
 		new connectDB();
 		Connection con = connectDB.getConnect();
 
@@ -58,14 +55,7 @@ public class ProductDaoImpl extends connectDB implements ProductDao {
 			ps.setString(7, product.getDiscount());
 			ps.setString(8, product.getImage_link());
 			ps.setString(9, product.getCreated());
-			
-			ps.setInt(10, product.getQuantity());
-			
-			ps.setString(11, product.getId());
-			
-			
-			
-			
+			ps.setString(10, product.getId());
 			ps.executeUpdate();
 		} catch (SQLException e) {
 			e.printStackTrace();
@@ -111,8 +101,6 @@ public class ProductDaoImpl extends connectDB implements ProductDao {
 				product.setDiscount(rs.getString("discount"));
 				product.setImage_link(rs.getString("image_link"));
 				product.setCreated(rs.getString("created"));
-				
-				product.setQuantity(rs.getInt("quantity"));
 				return product;
 
 			}
@@ -150,10 +138,6 @@ public class ProductDaoImpl extends connectDB implements ProductDao {
 				product.setDiscount(rs.getString("discount"));
 				product.setImage_link(rs.getString("image_link"));
 				product.setCreated(rs.getString("created"));
-				
-				
-				product.setQuantity(rs.getInt("quantity"));
-				
 				products.add(product);
 			}
 
@@ -188,8 +172,6 @@ public class ProductDaoImpl extends connectDB implements ProductDao {
 				product.setDiscount(rs.getString("discount"));
 				product.setImage_link(rs.getString("image_link"));
 				product.setCreated(rs.getString("created"));
-				
-				product.setQuantity(rs.getInt("quantity"));
 				products.add(product);
 			}
 
@@ -223,8 +205,6 @@ public class ProductDaoImpl extends connectDB implements ProductDao {
 				product.setDiscount(rs.getString("discount"));
 				product.setImage_link(rs.getString("image_link"));
 				product.setCreated(rs.getString("created"));
-				
-				product.setQuantity(rs.getInt("quantity"));	
 				productList.add(product);
 			}
 
@@ -237,27 +217,71 @@ public class ProductDaoImpl extends connectDB implements ProductDao {
 	}
 
 	@Override
-	public void edit_Quatity(int id, int newQuantity) {
-		String sql = "UPDATE product SET quantity=? WHERE id = ?";
-		new connectDB();
-		Connection con = connectDB.getConnect();
+	public List<Product> searchByPrice(String pricemin, String pricemax) {
+		List<Product> productList = new ArrayList<Product>();
+		String sql = "SELECT * FROM product WHERE CAST(price - (price * discount / 100) AS INTEGER) >= ? AND  CAST(price - (price * discount / 100) AS INTEGER) <= ?";
+		Connection conn = connectDB.getConnect();
 
 		try {
-			PreparedStatement ps = con.prepareStatement(sql);
-			ps.setInt(1, newQuantity);
-			ps.setInt(2, id);
-			
-			
-			
-			
-			ps.executeUpdate();
+			PreparedStatement ps = conn.prepareStatement(sql);
+			ps.setString(1, pricemin);
+			ps.setString(2, pricemax);
+			ResultSet rs = ps.executeQuery();
+
+			while (rs.next()) {
+				Product product = new Product();
+				product.setId(rs.getString("id"));
+				product.setCatalog_id(rs.getString("catalog_id"));
+				product.setName(rs.getString("name"));
+				product.setPrice(rs.getString("price"));
+				product.setStatus(rs.getString("status"));
+				product.setDescription(rs.getString("description"));
+				product.setContent(rs.getString("content"));
+				product.setDiscount(rs.getString("discount"));
+				product.setImage_link(rs.getString("image_link"));
+				product.setCreated(rs.getString("created"));
+				productList.add(product);
+			}
+
 		} catch (SQLException e) {
+			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		
+
+		return productList;
 	}
-
 	
-	
+	@Override
+	public List<Product> searchByPriceMin(String pricemin) {
+		List<Product> productList = new ArrayList<Product>();
+		String sql = "SELECT * FROM product WHERE CAST(price - (price * discount / 100) AS INTEGER) >= ?";
+		Connection conn = connectDB.getConnect();
 
+		try {
+			PreparedStatement ps = conn.prepareStatement(sql);
+			ps.setString(1, pricemin);
+			ResultSet rs = ps.executeQuery();
+
+			while (rs.next()) {
+				Product product = new Product();
+				product.setId(rs.getString("id"));
+				product.setCatalog_id(rs.getString("catalog_id"));
+				product.setName(rs.getString("name"));
+				product.setPrice(rs.getString("price"));
+				product.setStatus(rs.getString("status"));
+				product.setDescription(rs.getString("description"));
+				product.setContent(rs.getString("content"));
+				product.setDiscount(rs.getString("discount"));
+				product.setImage_link(rs.getString("image_link"));
+				product.setCreated(rs.getString("created"));
+				productList.add(product);
+			}
+
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+
+		return productList;
+	}
 }
