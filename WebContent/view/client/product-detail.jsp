@@ -69,8 +69,8 @@
 	                    </c:otherwise>
 	                     </c:choose>
                    
-                       <p class="aa-product-avilability">Tình trạng: <span>
-                      			<c:choose>
+                      <p class="aa-product-avilability">Tình trạng: <span class="status">
+                      	<c:choose>
 			                        <c:when test="${detail_product.status == 1}"> 
 			                        	<c:out value="Còn hàng"/>
 			                       	</c:when>
@@ -78,20 +78,7 @@
 								        <c:out value="Hết hàng"/>
 								    </c:otherwise>
 		                       	</c:choose>
-                      </span></p> 
-                      
-                      <p class="aa-product-quantily" id="Count_Quantity">Số Lượng: <span>
-                      			<c:choose>
-			                        <c:when test="${detail_product.quantity > 0}"> 
-			                        	<c:out value="${detail_product.quantity}"/>
-			                       	</c:when>
-			                       <c:otherwise>
-								        <c:out value="Hết hàng"/>
-								    </c:otherwise>
-		                       	</c:choose>
                       </span></p>
-                      
-                      
                     </div>
                     <p>${detail_product.description}</p>
                     <div class="aa-prod-quantity">                  
@@ -103,17 +90,7 @@
                       </p>
                     </div>
                     <div class="aa-prod-view-bottom">
-                    	<c:choose>
-						    <c:when test="${detail_product.quantity>0}">
-						        <a class="aa-add-to-cart-btn" href="${pageContext.request.contextPath}/view/client/add-cart?product-id=${detail_product.id}">Thêm vào giỏ hàng</a>
-						    </c:when>
-						    
-						    <c:otherwise>
-						       <a class="aa-add-to-cart-btn" >ĐÃ HẾT HÀNG !!</a>
-						    </c:otherwise>
-						</c:choose>
-                    
-                      
+                      <a class="aa-add-to-cart-btn" href="${pageContext.request.contextPath}/view/client/add-cart?product-id=${detail_product.id}">Thêm vào giỏ hàng</a>
                     </div>
                   </div>
                 </div>

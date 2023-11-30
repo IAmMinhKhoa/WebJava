@@ -33,8 +33,6 @@
        <div class="col-md-12">
          <div class="cart-view-area">
            <div class="cart-view-table">
-           
-           <!-- FORM POST CART -->
              <form action="${pageContext.request.contextPath}/view/client/cart-update" method="post">
                <div class="table-responsive">
                   <table class="table">
@@ -56,7 +54,7 @@
                         <td><a href="${pageContext.request.contextPath}/view/client/product-detail?id=${item.product.id}"><img src="${pageContext.request.contextPath}/view/client/assets/images/products/img-test/${item.product.image_link}" alt="img${item.product.name }"></a></td>
                         <td><a class="aa-cart-title" href="${pageContext.request.contextPath}/view/client/product-detail?id=${item.product.id}">${item.product.name }</a></td>
                         <td>${item.product.price} VNĐ</td>
-                        <td><input class="aa-cart-quantity" type="number" name="${item.product.id}" value="${item.qty}" min=1 max ="${item.product.quantity }"></td>
+                        <td><input class="aa-cart-quantity" type="number" name="${item.product.id}" value="${item.qty}" min=1></td>
                         <td>${item.product.discount} %</td>
                         <td>${item.price}00 VNĐ</td>
                       </tr>

@@ -25,6 +25,6 @@ public interface ProductService {
 	List<Product> searchByPriceMin(String pricemin);
 	
 	List<Product> getProductByIdCate(int idCate);
-	void edit_Quatity(int id, int newQuantity);
+
 }
 
