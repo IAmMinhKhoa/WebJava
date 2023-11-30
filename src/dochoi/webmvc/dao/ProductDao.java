@@ -20,6 +20,10 @@ public interface ProductDao {
 	List<Product> getProductById(int id);
 
 	List<Product> searchByName(String productName);
+	
+	List<Product> searchByPrice(String pricemin, String pricemax);
+	
+	List<Product> searchByPriceMin(String pricemin);
 
 	void edit_Quatity(int id, int newQuantity);
 }
