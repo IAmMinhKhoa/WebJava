@@ -52,9 +52,33 @@ public class UserDaoImpl extends connectDB implements UserDao {
 	}
 	
 	@Override
-	public User get(String name) {
-		// TODO Auto-generated method stub
-		return null;
+	public User get(String username) {
+		User user = new User();
+		String sql = "select * from users where username=?";
+		new connectDB();
+		Connection con = connectDB.getConnect();
+		
+		try {
+			PreparedStatement ps = con.prepareStatement(sql);
+			ps.setString(1, username);
+			ResultSet rs = ps.executeQuery();
+
+			while (rs.next()) {
+				user.setId(rs.getInt("id"));
+				user.setName(rs.getString("name"));
+				user.setEmail(rs.getString("email"));
+				user.setPhone(rs.getString("phone"));
+				user.setUsername(rs.getString("username"));
+				user.setPassword(rs.getString("password"));
+				user.setCreated(rs.getString("created"));
+			}
+			
+			
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+
+        return user;
 	}
 
 	@Override
@@ -108,6 +132,26 @@ public class UserDaoImpl extends connectDB implements UserDao {
 		}
 		
 	}
+	
+	@Override
+	public void edit(String fullname, String email, String phone, String username) {	
+		String sql = "Update users set name=?, email=?, phone=? where username=?";
+		new connectDB();
+		Connection con = connectDB.getConnect();
+		
+		try {
+			PreparedStatement ps = con.prepareStatement(sql);
+			ps.setString(1, fullname);
+			ps.setString(2, email);
+			ps.setString(3, phone);
+			ps.setString(4, username);
+
+			ps.executeUpdate();
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+	}
+	
 	
 	@Override
 	public List<User> getAll() {		

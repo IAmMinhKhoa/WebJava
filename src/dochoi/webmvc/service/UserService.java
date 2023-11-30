@@ -9,11 +9,13 @@ void insert(User user);
 	
 	void edit(User user);
 	
+	void edit(String fullname, String email, String phone, String username);
+	
 	void delete(int id);
 	
 	User get(int id);
 	
-	User get(String name);
+	User get(String username);
 
 	List<User> getAll();
 

@@ -28,6 +28,11 @@ public class UserServicesImpl implements UserService {
 		userDao.edit(oldUSer);
 
 	}
+	
+	@Override
+	public void edit(String fullname, String email, String phone, String username) {
+		userDao.edit(fullname, email, phone, username);
+	}
 
 	@Override
 	public List<User> getAll() {
@@ -46,9 +51,9 @@ public class UserServicesImpl implements UserService {
 	}
 
 	@Override
-	public User get(String name) {
+	public User get(String username) {
 		// TODO Auto-generated method stub
-		return null;
+		return userDao.get(username);
 	}
 
 
