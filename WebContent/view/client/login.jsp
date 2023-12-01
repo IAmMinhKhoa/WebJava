@@ -40,7 +40,7 @@
                    <input type="text" placeholder="Username" name="username">
                    <label for="">Mật khẩu<span>*</span></label>
                     <input type="password" placeholder="Password" name="password">
-                    <p class="rememberme" style="display: block"><input type="checkbox" id="rememberme"> Ghi nhớ </p> 
+                    <p class="rememberme" style="display: block"><a href="${pageContext.request.contextPath}/view/client/forgotPassword.jsp" style="text-decoration: underline; color: #ff704d">Quên mật khẩu</a> </p> 
      
                     <p style="color:red; display:block">
 		                ${errorMsg}

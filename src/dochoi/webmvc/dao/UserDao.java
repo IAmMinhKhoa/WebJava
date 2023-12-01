@@ -12,6 +12,8 @@ public interface UserDao {
 	
 	void edit(String fullname, String email, String phone, String username);
 	
+	boolean changePassword(String email, String newpassword);
+	
 	void delete(int id);
 
 	User get(String username);

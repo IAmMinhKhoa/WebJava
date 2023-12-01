@@ -32,6 +32,37 @@
        <servlet-name>addCategory</servlet-name>
        <url-pattern>/admin/cate/add</url-pattern>
    </servlet-mapping>
+   
+   <!-- Forgot password  -->
+      <servlet>
+       <servlet-name>forgotPassword</servlet-name>
+       <servlet-class>dochoi.webmvc.controller.ForgotPassword</servlet-class>
+   </servlet>
+ 
+   <servlet-mapping>
+       <servlet-name>forgotPassword</servlet-name>
+       <url-pattern>/view/client/forgotPassword</url-pattern>
+   </servlet-mapping>
+   
+         <servlet>
+       <servlet-name>validateOTP</servlet-name>
+       <servlet-class>dochoi.webmvc.controller.ValidateOtp</servlet-class>
+   </servlet>
+ 
+   <servlet-mapping>
+       <servlet-name>validateOTP</servlet-name>
+       <url-pattern>/view/client/validateOTP</url-pattern>
+   </servlet-mapping>
+   
+   <servlet>
+  	   <servlet-name>newPassword</servlet-name>
+       <servlet-class>dochoi.webmvc.controller.NewPassword</servlet-class>
+   </servlet>
+ 
+   <servlet-mapping>
+       <servlet-name>newPassword</servlet-name>
+       <url-pattern>/view/client/newPassword</url-pattern>
+   </servlet-mapping>
         
    <servlet>
        <servlet-name>listCategory</servlet-name>

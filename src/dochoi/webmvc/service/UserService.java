@@ -13,6 +13,8 @@ void insert(User user);
 	
 	void delete(int id);
 	
+	boolean changePassword(String email, String newpassword);
+	
 	User get(int id);
 	
 	User get(String username);

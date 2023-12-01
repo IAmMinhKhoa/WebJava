@@ -184,6 +184,27 @@ public class UserDaoImpl extends connectDB implements UserDao {
 		return users; 
 	}
 
+	@Override
+	public boolean changePassword(String email, String newpassword) {
+	    if (email == null || newpassword == null) {
+	        return false; // Kiểm tra tính hợp lệ của dữ liệu đầu vào
+	    }
+
+	    Connection conn = connectDB.getConnect();
+	    try {
+	        PreparedStatement pst = conn.prepareStatement("update users set password = ? where email = ?");
+	        pst.setString(1, newpassword);
+	        pst.setString(2, email);
+
+	        int rowCount = pst.executeUpdate();
+	        if (rowCount > 0) {
+	            return true;
+	        }
+	    } catch (SQLException e) {
+	        e.printStackTrace(); // Xử lý ngoại lệ, ghi log lỗi hoặc thông báo lỗi cho người dùng
+	    }
+	    return false;
+	}
 }
 
 

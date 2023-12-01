@@ -33,6 +33,11 @@ public class UserServicesImpl implements UserService {
 	public void edit(String fullname, String email, String phone, String username) {
 		userDao.edit(fullname, email, phone, username);
 	}
+	
+	@Override
+	public boolean changePassword(String email, String newpassword) {
+		return userDao.changePassword(email, newpassword);
+	}
 
 	@Override
 	public List<User> getAll() {
