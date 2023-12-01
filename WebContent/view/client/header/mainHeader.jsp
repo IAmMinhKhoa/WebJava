@@ -15,6 +15,8 @@
           integrity="sha384-Bfad6CLCknfcloXFOyFnlgtENryhrpZCe29RTifKEixXQZ38WheV+i/6YWSzkz3V" crossorigin="anonymous">
     <link href="${url}/css/font-awesome.css" rel="stylesheet">
     
+ 
+    
     <!-- Bootstrap -->
     <link href="${url}/css/bootstrap.css" rel="stylesheet">   
      <link rel="icon" href="${url}/images/favicon.png" type="image/x-icon">
@@ -32,7 +34,7 @@
     <!-- Top Slider CSS -->
     <link href="${url}/css/sequence-theme.modern-slide-in.css" rel="stylesheet" media="all">
 
-   
+    <link href="${url}/css/style.css" rel="stylesheet">  
     <!-- Google Font -->
     <link href='https://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
