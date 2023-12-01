@@ -35,7 +35,7 @@
               </li>
              <%--  <li><a href="${pageContext.request.contextPath}/view/client/news-list">TIN TỨC</a></li> --%>
               <li><a href="${pageContext.request.contextPath}/view/client/security">CHÍNH SÁCH</a></li>
-              <li><a href="${pageContext.request.contextPath}/view/client/contact">LIÊN HỆ</a></li>
+              <li><a href="${pageContext.request.contextPath}/view/client/chatbot">CHAT BOT TƯ VẤN</a></li>
              <!-- search box -->
              <!-- <li class="aa-search">
               <a class="aa-search-box">

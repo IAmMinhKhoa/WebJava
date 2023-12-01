@@ -19,8 +19,8 @@ import dochoi.webmvc.service.impl.ProductServiceImpl;
 public class DeleteProductInCartController extends HttpServlet{
 	private static final long serialVersionUID = 1L;
 	ProductService productservice = new ProductServiceImpl();
-	DecimalFormat df = new DecimalFormat("#.000");
-	DecimalFormat df1 = new DecimalFormat("#.0");
+	DecimalFormat df = new DecimalFormat("#,000");
+	//DecimalFormat df1 = new DecimalFormat("#.0");
 	
 	@Override
 	protected void doGet(HttpServletRequest req,HttpServletResponse resp) throws ServletException, IOException {

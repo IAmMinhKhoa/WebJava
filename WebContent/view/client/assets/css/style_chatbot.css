@@ -1,0 +1,90 @@
+#wrap_chatbot {
+  display: inline-block;
+  width: 100%;
+  margin-top: 20px;
+  margin-bottom: 50px;
+  height: 500px;
+}
+
+#chat-window {
+  max-width: 500px;
+  margin: auto;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  height: 500px;
+}
+
+.main-title {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  width: 100%;
+  text-align: center;
+}
+
+#chat-messages {
+  height: 370px;
+  overflow-y: scroll;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 10px;
+}
+
+#chat-form {
+  display: flex;
+}
+
+#chat-input {
+  flex: 1;
+  border: none;
+  padding: 8px;
+  border-radius: 4px;
+}
+
+#chat-form button {
+  margin-left: 10px;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+  background-color: #4caf50;
+  color: #fff;
+  cursor: pointer;
+}
+
+
+
+/*  CSS TIN NHẮN*/
+
+ .message.user-message {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+#icon_chatbot {
+  width: 40px;
+  height: 40px;
+  margin-right: 8px;
+  margin-bottom: 5px;
+}
+
+.message.user-message span {
+  font-size: 18px;
+  line-height: 1.4;
+  background-color: #e2e2e2;
+  border-radius: 4px;
+  padding: 8px;
+  margin-top: 5px;
+}
+
+.message.bot-message span {
+  font-size: 18px;
+  line-height: 1.4;
+  background-color: rgb(128, 255, 255);
+  border-radius: 4px;
+  padding: 8px;
+  margin-top: 5px;
+}

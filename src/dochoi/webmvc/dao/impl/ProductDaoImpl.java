@@ -155,6 +155,7 @@ public class ProductDaoImpl extends connectDB implements ProductDao {
 				product.setQuantity(rs.getInt("quantity"));
 				
 				products.add(product);
+				//System.out.println(product.getPrice());
 			}
 
 		} catch (SQLException e) {

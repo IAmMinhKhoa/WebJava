@@ -20,7 +20,7 @@ public class HomeController extends HttpServlet{
 	private static final long serialVersionUID = 1L;
 	ProductService productService = new ProductServiceImpl();
 	//BoardnewService boardnewService = new BoardnewServicesImpl();
-	DecimalFormat df = new DecimalFormat("#.000");
+	DecimalFormat df = new DecimalFormat("#,000");
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		

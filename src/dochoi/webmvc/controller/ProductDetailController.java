@@ -31,7 +31,7 @@ public class ProductDetailController extends HttpServlet {
 	CategoryService cateService = new CategoryServicesImpl();
 	ProductService productService = new ProductServiceImpl();
 	ReviewService reviewService = new ReviewServicesImpl();
-	DecimalFormat df = new DecimalFormat("#.000");
+	DecimalFormat df = new DecimalFormat("#,000");
 	
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		String id = req.getParameter("id");

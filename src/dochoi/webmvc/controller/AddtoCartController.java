@@ -24,7 +24,7 @@ import dochoi.webmvc.service.impl.ProductServiceImpl;
 public class AddtoCartController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 	ProductService productService = new ProductServiceImpl();
-	DecimalFormat df = new DecimalFormat("#.000");
+	DecimalFormat df = new DecimalFormat("#,000");
 	
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		int n= 0;
@@ -45,7 +45,18 @@ public class AddtoCartController extends HttpServlet {
 					Item item = new Item();
 					item.setQty(qty);
 					item.setProduct(product);
+					
+					double price = Double.parseDouble(product.getPrice());
+					double discount = Double.parseDouble(product.getDiscount());
+					
+					System.out.println(df.format(Double.parseDouble(product.getPrice()) - Double.parseDouble(product.getPrice())*(Double.parseDouble(product.getDiscount())/100)));
+					String temp_string_price=df.format(Double.parseDouble(product.getPrice()) - Double.parseDouble(product.getPrice())*(Double.parseDouble(product.getDiscount())/100));
+					
 					item.setPrice(Double.parseDouble(product.getPrice()) - Double.parseDouble(product.getPrice())*(Double.parseDouble(product.getDiscount())/100));
+					//item.setPrice(Double.parseDouble(temp_string_price));
+					System.out.println(df.format(price)+"/"+discount);
+					
+					
 					order.setSumPrice(0);
 					order.setSumPrice(order.getSumPrice() + item.getPrice());
 					listItems.add(item);
@@ -63,6 +74,7 @@ public class AddtoCartController extends HttpServlet {
 							item.setQty(item.getQty() + qty);
 							order.setSumPrice(order.getSumPrice() + Double.parseDouble(item.getProduct().getPrice()) - Double.parseDouble(item.getProduct().getPrice())*(Double.parseDouble(item.getProduct().getDiscount())/100));
 							item.setPrice(item.getPrice() + (Double.parseDouble(item.getProduct().getPrice()) - Double.parseDouble(item.getProduct().getPrice())*(Double.parseDouble(item.getProduct().getDiscount())/100)));
+							
 							check = true;
 						}
 					}

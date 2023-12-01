@@ -19,7 +19,7 @@ import dochoi.webmvc.model.Order;
 public class UpdateCartController extends HttpServlet {
 
 	private static final long serialVersionUID = 1L;
-	DecimalFormat df = new DecimalFormat("#.000");
+	DecimalFormat df = new DecimalFormat("#,000");
 	
 	@Override
 	public void doGet(HttpServletRequest req,HttpServletResponse resp) throws ServletException, IOException{

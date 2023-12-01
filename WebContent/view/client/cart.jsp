@@ -58,7 +58,7 @@
                         <td>${item.product.price} VNĐ</td>
                         <td><input class="aa-cart-quantity" type="number" name="${item.product.id}" value="${item.qty}" min=1 max ="${item.product.quantity }"></td>
                         <td>${item.product.discount} %</td>
-                        <td>${item.price}00 VNĐ</td>
+                        <td>${item.price} VNĐ</td>
                       </tr>
           			 </c:forEach>
           			 <tr>
