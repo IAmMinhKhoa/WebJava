@@ -15,7 +15,7 @@
 	<section id="wrap_chatbot">
 	
 		<div id="chat-window">
-	      <div class="main-title">CHAT BOT USING CHAT-GPT</div>
+	      <div class="main-title">CHAT BOT CỬA HÀNG</div>
 	      <div id="chat-messages"></div>
 	      <form id="chat-form">
 	        <input

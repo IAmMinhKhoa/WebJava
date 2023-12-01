@@ -436,6 +436,21 @@
 		<servlet-name>contact</servlet-name>
 		<url-pattern>/view/client/contact</url-pattern>
    </servlet-mapping> 
+   
+   
+   
+   
+   
+      <servlet>
+		<servlet-name>chatbot</servlet-name>
+		<servlet-class>dochoi.webmvc.controller.ChatbotController</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>chatbot</servlet-name>
+		<url-pattern>/view/client/chatbot</url-pattern>
+   </servlet-mapping> 
+   
+   
     
 	<servlet>
 		<servlet-name>AddtoCartController</servlet-name>

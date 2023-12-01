@@ -7,7 +7,7 @@ form.addEventListener("submit", async (e) => {
   e.preventDefault();
   const message = input.value;
   input.value = "";
-  messages.innerHTML += `<div class="message user-message"><img src="./assets/images/news/user.png" alt="user icon"> <span>${message}</span></div>`;
+  messages.innerHTML += `<div class="message user-message"><img id="icon_chatbot" src="./assets/images/news/user.png" alt="user icon"> <span>${message}</span></div>`;
 
   // Use axios library to make a POST request to the OpenAI API
   const response = await axios.post(
@@ -36,7 +36,7 @@ form.addEventListener("submit", async (e) => {
   const chatbotResponse = response.data.choices[0].message.content;
 console.log(chatbotResponse);
 
-  messages.innerHTML += `<div class="message bot-message"><img src="./assets/images/news/chatbot.png" alt="bot icon"> <span>${chatbotResponse}</span></div>`;
+  messages.innerHTML += `<div class="message bot-message"><img id="icon_chatbot"  src="./assets/images/news/chatbot.png" alt="bot icon"> <span>${chatbotResponse}</span></div>`;
 });
 
 /*"https://api.openai.com/v1/chat/completions",

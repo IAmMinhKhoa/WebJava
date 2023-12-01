@@ -126,7 +126,7 @@
                       <c:forEach items="${order.items}" var="item">
                         <tr>
                           <td>${item.product.name } <strong> x  ${item.qty}</strong></td>
-                          <td>${item.price}00 VNĐ</td>
+                          <td>${item.price} VNĐ</td>
                         </tr>
                        </c:forEach>
                       </tbody>
