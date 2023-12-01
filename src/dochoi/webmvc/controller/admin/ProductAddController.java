@@ -43,14 +43,13 @@ public class ProductAddController extends HttpServlet {
 			String product_cate = req.getParameter("product-cate");
 			String product_name = req.getParameter("product-name");
 			String product_price = req.getParameter("product-price");
-			String product_status = req.getParameter("product-status");
+			/* String product_status = req.getParameter("product-status"); */
 			String product_desc = req.getParameter("product-desc");
 			String product_content = req.getParameter("product-content");
 			String product_discount = req.getParameter("product-discount");
 			/*String product_image = req.getParameter("product-image");*/
 			String product_day = req.getParameter("product-day");
-
-
+			String product_quantity = req.getParameter("product-quatity");
 			
 			try { // Xử lý file được gửi từ form // ... (Phần xử lý file như trong đoạn mã của bạn)
 				  
@@ -73,40 +72,45 @@ public class ProductAddController extends HttpServlet {
 					
 				  // Lưu file vào một thư mục trên server 
 					  String applicationPath = req.getServletContext().getRealPath("/view/client/assets/images/products");
-				  String uploadPath = applicationPath + File.separator + "img-test"; // Thư mục để lưu file 
+	
+					  String uploadPath = applicationPath + File.separator + "img-test"; // Thư mục để lưu file 
 				  File fileUploadDirectory = new File(uploadPath); 
 				  if(!fileUploadDirectory.exists()) { fileUploadDirectory.mkdirs(); }
 				  
 				  // Ghi file vào thư mục 
 				  String savePath = uploadPath + File.separator + fileName; 
 				  filePart.write(savePath);
-				  
+				  System.out.println(savePath);
 				  
 				  product.setCatalog_id(product_cate);
 					product.setName(product_name);
 					product.setPrice(product_price);
-					product.setStatus(product_status);
+					
 					product.setDescription(product_desc);
 					product.setContent(product_content);
 					product.setDiscount(product_discount);
 					product.setImage_link(fileName);
 					product.setCreated(product_day);
+					
+					product.setQuantity(Integer.parseInt(product_quantity));
+					
+					if(product.getQuantity()>0) {
+						product.setStatus("1");
+					}else {
+						product.setStatus("0");
+					}
+					
+					
 					productService.insert(product);
 					resp.sendRedirect(req.getContextPath() + "/admin/product/list");
 				  
 				  } catch (IOException e) { // Xử lý ngoại lệ khi có lỗi trong quá trình xử lý
 					  e.printStackTrace(); // In thông tin lỗi ra console hoặc xử lý tùy ý // Có thể thêm các logic khác như thông báo lỗi cho người dùng 
 				  }
-				 
-				
-
-				
-				
-
 		}
 		// Phương thức trích xuất tên file từ Part
 	    private String extractFileName(Part part) {
-	    	 System.out.println(part);
+	    	
 	        String contentDisp = part.getHeader("content-disposition");
 	       
 	        String[] items = contentDisp.split(";");

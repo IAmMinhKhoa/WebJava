@@ -11,7 +11,7 @@
               <div class="card-body">
                 <div class="card-title">Sửa sản phẩm</div>
                 <hr>
-                <form method="post" action="${pageContext.request.contextPath}/admin/product/edit">
+                <form method="post" action="${pageContext.request.contextPath}/admin/product/edit" enctype="multipart/form-data">
                 
                  <div class="form-group">
                     <label for="input-1">Mã sản phẩm</label>
@@ -44,6 +44,9 @@
                   </div>
                   
                     <div class="form-group">
+                    
+                    
+                    
 	                  <label for="input-2">Trạng thái</label>
 	                  <div>
 	                    <select class="form-control valid" id="input-6" name="product-status" required aria-invalid="false">
@@ -51,6 +54,14 @@
 	                        <option value="0" >Hết hàng</option>
 	                    </select>
 	                  </div>
+	                  
+	                  
+	                  <!--  SỐ LƯỢNG  -->
+	                  <!--  SỐ LƯỢNG  -->
+	                  <label for="input-2">Số Lượng</label>
+	                  <input type="number" class="form-control" id="input-1" min=1 name="product-quatity" value="${product.quantity}"required>
+	                  
+	                  
 	                </div>
 	                 <div class="form-group">
 		                <label for="input-2">Giảm giá</label>
@@ -76,7 +87,9 @@
                 
                  <div class="form-group">
                     <label for="input-1">Ảnh đại diện</label>
-                    <input type="text" class="form-control" id="input-1" placeholder="Tên hình" name="product-image" value="${product.image_link}">
+                    <%-- <input type="text" class="form-control" id="input-1" placeholder="Tên hình" name="product-image" value="${product.image_link}"> --%>
+                    
+                    <input type="file" class="form-control" id="input-1" placeholder="Tên hình" name="product-image" value="${product.image_link}" required>
                   </div>
               
               

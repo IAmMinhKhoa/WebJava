@@ -26,6 +26,7 @@ public class ProductDaoImpl extends connectDB implements ProductDao {
 			ps.setString(1, product.getCatalog_id());
 			ps.setString(2, product.getName());
 			ps.setString(3, product.getPrice());
+			System.out.println(product.getStatus());
 			ps.setString(4, product.getStatus());
 			ps.setString(5, product.getDescription());
 			ps.setString(6, product.getContent());

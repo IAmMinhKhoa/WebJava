@@ -16,7 +16,7 @@
                
                   <div class="form-group">
                     <label for="input-1">Tên sản phẩm</label>
-                    <input type="text" class="form-control" id="input-1" placeholder="Tên sản phẩm" name="product-name">
+                    <input type="text" class="form-control" id="input-1" placeholder="Tên sản phẩm" name="product-name" required>
                   </div>
                   
         
@@ -36,21 +36,33 @@
                   </div>
 	                <div class="form-group">
                     <label for="input-1">Giá</label>
-                    <input type="text" class="form-control" id="input-1" placeholder="Giá" name="product-price">
+                    <input type="number" class="form-control" id="input-1" placeholder="Giá" min=1000 name="product-price" required>
                   </div>
                     <div class="form-group">
-	                  <label for="input-2">Trạng thái</label>
+                    
+                    
+                    
+	                  <!-- <label for="input-2">Trạng thái</label>
 	                  <div>
 	                    <select class="form-control valid" id="input-6" name="product-status" required aria-invalid="false">
 	                        <option value="1">Còn hàng</option>
 	                        <option value="0">Hết hàng</option>
 	                    </select>
-	                  </div>
+	                  </div> -->
+	                  
+	                  
+	                  <!--  SỐ LƯỢNG  -->
+	                  <label for="input-2">Số Lượng</label>
+	                  <input type="number" class="form-control" id="input-1" placeholder="Số Lượng" min=1 name="product-quatity" required>
+	                  
+	                  
+	                  
+	                  
 	                </div>
 	                 <div class="form-group">
 		                <label for="input-2">Giảm giá</label>
 		                <div class="input-group">
-		                <input type="text" class="form-control" placeholder="Giảm ... %" name="product-discount">
+		                <input type="number" class="form-control" placeholder="Giảm ... %" min=0 max=99 name="product-discount" required>
 		                <div class="input-group-append">
 		                <button class="btn btn-light" type="button">%</button>
 		                </div>
@@ -59,21 +71,21 @@
                  <div class="form-group">
                   <label for="input-2" class="col-form-label">Mô tả</label>
                   <div>
-                    <textarea class="form-control" rows="4" id="input-17" name="product-desc"></textarea>
+                    <textarea class="form-control" rows="4" id="input-17" name="product-desc" required></textarea>
                   </div>
                 </div>
                 
                 <div class="form-group">
                   <label for="input-2" class="col-form-label">Nội dung</label>
                   <div>
-                    <textarea class="form-control" rows="4" id="input-17" name="product-content"></textarea>
+                    <textarea class="form-control" rows="4" id="input-17" name="product-content" required></textarea>
                   </div>
                 </div>
                 
                  <div class="form-group">
                     <label for="input-1">Ảnh đại diện</label>
                    <!--  <input type="text" class="form-control" id="input-1" placeholder="Tên hình" name="product-image"> -->
-                     <input type="file" class="form-control" id="input-1" placeholder="Tên hình" name="product-image">
+                     <input type="file" class="form-control" id="input-1" placeholder="Tên hình" name="product-image" required>
                   </div>
                <div class="form-footer">
                     <button class="btn btn-danger"><i class="fa fa-times"></i><a href="${pageContext.request.contextPath}/admin/product/list">Hủy</a></button>

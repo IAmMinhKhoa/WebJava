@@ -21,14 +21,16 @@ public class ProductServiceImpl implements ProductService {
 		Product oldProduct = productDao.get(Integer.parseInt(newProduct.getId()));
 		oldProduct.setName(newProduct.getName());
 		oldProduct.setCatalog_id(newProduct.getCatalog_id());
-		oldProduct.setStatus(newProduct.getStatus());
+		 oldProduct.setStatus(newProduct.getStatus()); 
 		oldProduct.setPrice(newProduct.getPrice());
 		oldProduct.setDescription(newProduct.getDescription());
 		oldProduct.setContent(newProduct.getContent());
 		oldProduct.setDiscount(newProduct.getDiscount());
 		oldProduct.setImage_link(newProduct.getImage_link());
 		oldProduct.setCreated(newProduct.getCreated());
-
+		oldProduct.setQuantity(newProduct.getQuantity());
+		
+		
 		productDao.edit(oldProduct);
 
 	}
