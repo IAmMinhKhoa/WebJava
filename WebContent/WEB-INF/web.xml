@@ -35,13 +35,13 @@
    
    <!-- Forgot password  -->
       <servlet>
-       <servlet-name>forgotPassword</servlet-name>
+       <servlet-name>forgotPass</servlet-name>
        <servlet-class>dochoi.webmvc.controller.ForgotPassword</servlet-class>
    </servlet>
  
    <servlet-mapping>
-       <servlet-name>forgotPassword</servlet-name>
-       <url-pattern>/view/client/forgotPassword</url-pattern>
+       <servlet-name>forgotPass</servlet-name>
+       <url-pattern>/view/client/forgotPass</url-pattern>
    </servlet-mapping>
    
          <servlet>

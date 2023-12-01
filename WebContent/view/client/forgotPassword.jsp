@@ -35,7 +35,7 @@
 						</ol>
 					</div>
                  
-                 	<form class="card mt-4" action="${pageContext.request.contextPath}/view/client/forgotPassword" method="POST">
+                 	<form class="card mt-4" action="${pageContext.request.contextPath}/view/client/forgotPass" method="POST">
 						<div class="card-body">
 							<div class="form-group" style="margin-top: 20px">
 								<label for="email-for-pass">Nhập địa chỉ email của bạn</label> 
