@@ -86,6 +86,11 @@ public class ProductServiceImpl implements ProductService {
 		
 	}
 
+	@Override
+	public String getImage(String id) {
+		return productDao.getImage(id);
+	}
+
 
 
 }

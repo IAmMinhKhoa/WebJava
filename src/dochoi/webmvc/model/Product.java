@@ -77,12 +77,12 @@ public class Product {
 	public void setDiscount(String discount) {
 		this.discount = discount;
 	}
-	public String getImage_link() {
-		return image_link;
-	}
-	public void setImage_link(String image_link) {
-		this.image_link = image_link;
-	}
+
+	
+	  public String getImage_link() { return image_link; }
+	  public void
+	  setImage_link(String image_link) { this.image_link = image_link; }
+	 
 	public String getCreated() {
 		return created;
 	}
@@ -102,8 +102,7 @@ public class Product {
 	public String toString() {
 		return "Product [id=" + id + ", catalog_id=" + catalog_id + ", name=" + name + ", price=" + price + ", status="
 				+ status + ", description=" + description + ", content=" + content + ", discount=" + discount
-				+ ", image_link=" + image_link + ", created="
-				+ created + "]";
+				+ ", image_link=" + image_link + ", created="+ created + "]";
 	}
 
 	

@@ -14,7 +14,7 @@ import dochoi.webmvc.dao.AdminLoginDao;
 import dochoi.webmvc.model.Admin;
 
 
-@WebServlet("/AdminLoginController")
+@WebServlet(urlPatterns={"/admin/login"})
 public class AdminLoginController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
            
@@ -47,6 +47,6 @@ public class AdminLoginController extends HttpServlet {
             rd.forward(request, response);     
 		}
 		
-			}
+	}
 
 }

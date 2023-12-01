@@ -14,6 +14,8 @@ public interface ProductDao {
 	Product get(int id);
 	
 	Product get(String name);
+	
+	String getImage (String id);
 
 	List<Product> getAll();
 	

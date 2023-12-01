@@ -14,9 +14,13 @@ public class connectDB {
 		try {
 			Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
 			
-			String connString ="jdbc:sqlserver://DESKTOP-UOI8PTB:1433;databaseName=QLĐC;useUnicode=true;characterEncoding=UTF-8;   trustServerCertificate=true";
+			//String connString ="jdbc:sqlserver://DESKTOP-UOI8PTB:1433;databaseName=QLĐC;useUnicode=true;characterEncoding=UTF-8;   trustServerCertificate=true";
 			String username = "sa";
-			String password = "123456";
+			String password = "123";
+			
+			String connString ="jdbc:sqlserver://DESKTOP-4LTEG87\\SQLEXPRESSB:1433;databaseName=QLĐC;useUnicode=true;characterEncoding=UTF-8;   trustServerCertificate=true";
+			
+			
 			connection = DriverManager.getConnection(connString,username,password);
 			
 			//connection=DriverManager.getConnection("jdbc:sqlserver://localhost:1433;databaseName=QLNS;user=sa;password=123;useUnicode=true;characterEncoding=UTF-8");

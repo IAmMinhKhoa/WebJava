@@ -20,6 +20,7 @@ import dochoi.webmvc.service.impl.ProductServiceImpl;
 /**
  * Servlet implementation class ProductListController
  */
+@WebServlet(urlPatterns={"/admin/product/list"})
 public class ProductListController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 

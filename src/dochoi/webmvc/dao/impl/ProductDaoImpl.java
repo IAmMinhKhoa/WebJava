@@ -148,7 +148,7 @@ public class ProductDaoImpl extends connectDB implements ProductDao {
 				product.setDescription(rs.getString("description"));
 				product.setContent(rs.getString("content"));
 				product.setDiscount(rs.getString("discount"));
-				product.setImage_link(rs.getString("image_link"));
+			//	product.setImage_link(rs.getString("image_link"));
 				product.setCreated(rs.getString("created"));
 				
 				
@@ -315,6 +315,23 @@ public class ProductDaoImpl extends connectDB implements ProductDao {
 			e.printStackTrace();
 		}
 		
+	}
+
+	@Override
+	public String getImage(String id) {
+		String sql = "SELECT image_link FROM product WHERE id = ?";
+		new connectDB();
+		Connection con = connectDB.getConnect();
+		try {
+			PreparedStatement ps = con.prepareStatement(sql);
+			ps.setString(1, id);
+			ResultSet rs = ps.executeQuery();
+			return rs.getString("image_link");
+			
+		}catch(SQLException e) {
+			e.printStackTrace();
+		}
+		return "";
 	}
 
 	
