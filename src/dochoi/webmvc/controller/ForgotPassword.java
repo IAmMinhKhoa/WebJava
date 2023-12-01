@@ -46,9 +46,8 @@ public class ForgotPassword extends HttpServlet {
 			props.put("mail.smtp.port", "465");
 			Session session = Session.getDefaultInstance(props, new javax.mail.Authenticator() {
 				protected PasswordAuthentication getPasswordAuthentication() {
-					return new PasswordAuthentication("toystorehcm@gmail.com", "tokpazohpqnyfycu");// Put your email
-																									// id and
-																									// password here
+					return new PasswordAuthentication("toystorehcm@gmail.com", "sjpdlwzwwidmkobs");// Put your email
+																									// id and																					// password here
 				}
 			});
 			// compose message
@@ -56,8 +55,16 @@ public class ForgotPassword extends HttpServlet {
 				MimeMessage message = new MimeMessage(session);
 				message.setFrom(new InternetAddress(email));// change accordingly
 				message.addRecipient(Message.RecipientType.TO, new InternetAddress(to));
-				message.setSubject("Hello");
-				message.setText("your OTP is: " + otpvalue);
+				String subject = "Xác nhận mã OTP từ Toy Store";
+				String body = "Chào bạn,\n\n"
+				            + "Cảm ơn bạn đã sử dụng dịch vụ của Toy Store. Đây là mã OTP của bạn để thay đổi mật khẩu:\n\n"
+				            + otpvalue + "\n\n"
+				            + "Vui lòng nhập mã này vào trang tiếp theo để hoàn tất quá trình thay đổi mật khẩu.\n\n"
+				            + "Trân trọng,\n"
+				            + "Toy Store";
+
+				message.setSubject(subject);
+				message.setText(body);
 				// send message
 				Transport.send(message);
 				System.out.println("message sent successfully");
