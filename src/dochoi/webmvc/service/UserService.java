@@ -21,5 +21,7 @@ void insert(User user);
 
 	List<User> getAll();
 
+	//THỐNG KÊ
+	List<User> getTop5KH();
 }
 

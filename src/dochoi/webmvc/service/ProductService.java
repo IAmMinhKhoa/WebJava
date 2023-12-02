@@ -26,5 +26,9 @@ public interface ProductService {
 	
 	List<Product> getProductByIdCate(int idCate);
 	void edit_Quatity(int id, int newQuantity);
+	
+
+	//THỐNG KÊ
+	List<Product> getTop5Product();
 }
 

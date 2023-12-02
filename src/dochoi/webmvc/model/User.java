@@ -8,6 +8,7 @@ public class User{
 	private String username;
 	private String password;
 	private String created;
+	private String amount;
 
 	public User(String username, String password) {
 		super();
@@ -80,6 +81,12 @@ public class User{
 	}
 	public void setCreated(String created) {
 		this.created = created;
+	}
+	public String getAmount() {
+		return amount;
+	}
+	public void setAmount(String amount) {
+		this.amount = amount;
 	}
 	@Override
 	public String toString() {

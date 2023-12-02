@@ -88,6 +88,11 @@ public class ProductServiceImpl implements ProductService {
 		
 	}
 
-
+	//THỐNG KÊ
+	@Override
+	public List<Product> getTop5Product() {
+		return productDao.getTop5Product();
+		
+	}
 
 }

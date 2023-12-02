@@ -21,4 +21,7 @@ public interface UserDao {
 	User get(int id);
 	
 	List<User> getAll();
+	
+	//THỐNG KÊ
+	List<User> getTop5KH();
 }

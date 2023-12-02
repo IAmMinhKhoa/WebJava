@@ -60,6 +60,12 @@ public class UserServicesImpl implements UserService {
 		// TODO Auto-generated method stub
 		return userDao.get(username);
 	}
-
+	
+	//THỐNG KÊ
+	//THỐNG KÊ
+	@Override
+	public List<User> getTop5KH() {
+		return userDao.getTop5KH();
+	}
 
 }

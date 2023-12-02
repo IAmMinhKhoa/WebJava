@@ -19,5 +19,13 @@ public interface TransactionDao {
 	
 	List<Transactions> getByUsername(String username); 
 	
+	String getDoanhThuTheoNgay(String ngay);
 	
+	String getDoanhThuHomNay();
+	
+	String getDoanhThuHomQua();
+	
+	String getDoanhThuThangNay();
+	
+	String getDoanhThuThangTruoc();
 }

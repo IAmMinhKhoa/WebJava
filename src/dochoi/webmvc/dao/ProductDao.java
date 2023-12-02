@@ -26,4 +26,7 @@ public interface ProductDao {
 	List<Product> searchByPriceMin(String pricemin);
 
 	void edit_Quatity(int id, int newQuantity);
+	
+	//THỐNG KÊ
+	List<Product> getTop5Product();
 }

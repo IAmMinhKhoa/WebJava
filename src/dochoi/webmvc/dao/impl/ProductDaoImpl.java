@@ -9,6 +9,7 @@ import java.util.List;
 
 import dochoi.webmvc.dao.ProductDao;
 import dochoi.webmvc.jdbc.connectDB;
+import dochoi.webmvc.model.Ordered;
 import dochoi.webmvc.model.Product;
 
 import java.sql.ResultSet;
@@ -319,7 +320,27 @@ public class ProductDaoImpl extends connectDB implements ProductDao {
 		
 	}
 
-	
-	
+	//THỐNG KÊ
+	@Override
+	public List<Product> getTop5Product(){
+		List<Product> products = new ArrayList<Product>();
+		String sql = "SELECT TOP 10 ord.product_id, prod.name, SUM(ord.qty) as qty FROM ordered ord JOIN product prod ON ord.product_id = prod.id GROUP BY ord.product_id, prod.name ORDER BY SUM(ord.qty) DESC";
+		Connection con = connectDB.getConnect();
+		try {
+			PreparedStatement ps = con.prepareStatement(sql); 
+			ResultSet rs = ps.executeQuery();
+			while(rs.next())
+			{
+				Product product = new Product();
+				product.setId(rs.getString(1));
+				product.setName(rs.getString(2));
+				product.setQuantity(rs.getInt(3));
+				products.add(product);
+			}
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		return products;
+	}
 
 }

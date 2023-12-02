@@ -17,6 +17,8 @@ import java.text.DateFormat;
 import java.text.DecimalFormat;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
 
 public class TransactionDaoImpl extends connectDB implements TransactionDao {
 	public void insert(Transactions transaction) { 
@@ -236,4 +238,152 @@ public class TransactionDaoImpl extends connectDB implements TransactionDao {
 		return transactions;
 	}
 	
+	//DOANH THU
+	
+		//Lấy doanh thu hôm nay
+		public String getDoanhThuHomNay() {
+		    LocalDate currentDate = LocalDate.now();
+		    DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd");
+		    String formattedDate = currentDate.format(formatter);
+		    String doanhthu = "";
+		    String sql = "SELECT SUM(CAST(amount AS decimal(18, 0))) " +
+		            "FROM transactions " +
+		            "WHERE WHERE YEAR(create) = YEAR(?) AND MONTH(create) = MONTH(?) AND DAY(create) = DAY(?)";
+		    Connection conn = connectDB.getConnect();
+		    try {
+		        PreparedStatement ps = conn.prepareStatement(sql);
+		        ps.setString(1, formattedDate);
+		        ps.setString(2, formattedDate);
+		        ps.setString(3, formattedDate);
+		        ResultSet rs = ps.executeQuery();
+		        while (rs.next()) {
+					DecimalFormat decimalFormat = new DecimalFormat("#,###");
+					doanhthu = decimalFormat.format(rs.getString(1));
+		        }
+		    } catch (SQLException e) {
+		        e.printStackTrace();
+		    }
+		    return doanhthu;
+		}
+		
+		//Lấy doanh thu hôm qua
+		public String getDoanhThuHomQua() {
+		    LocalDate currentDate = LocalDate.now();
+		    DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd");
+		    String formattedDate = currentDate.format(formatter);
+		    String doanhthu = "";
+		    String sql = "SELECT SUM(CAST(amount AS decimal(18, 0))) " +
+		            "FROM transactions " +
+		            "WHERE WHERE YEAR(create) = YEAR(?) AND MONTH(create) = MONTH(?) AND DAY(create) = DAY(?) - 1";
+		    Connection conn = connectDB.getConnect();
+		    try {
+		        PreparedStatement ps = conn.prepareStatement(sql);
+		        ps.setString(1, formattedDate);
+		        ps.setString(2, formattedDate);
+		        ps.setString(3, formattedDate);
+		        ResultSet rs = ps.executeQuery();
+		        while (rs.next()) {
+		        	if(rs.getString(1) == null) {
+		        		doanhthu = "0";
+		        	}
+		        	else {
+						DecimalFormat decimalFormat = new DecimalFormat("#,###");
+						doanhthu = decimalFormat.format(rs.getString(1));	
+		        	}
+		        }
+		    } catch (SQLException e) {
+		        e.printStackTrace();
+		    }
+		    return doanhthu;
+		}
+		
+		//Lấy doanh thu tháng này
+		public String getDoanhThuThangNay() {
+		    LocalDate currentDate = LocalDate.now();
+		    DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd");
+		    String formattedDate = currentDate.format(formatter);
+		    String doanhthu = "";
+		    String sql = "SELECT SUM(CAST(amount AS decimal(18, 0))) " +
+		            "FROM transactions " +
+		            "WHERE WHERE YEAR(create) = YEAR(?) AND MONTH(create) = MONTH(?)";
+		    Connection conn = connectDB.getConnect();
+		    try {
+		        PreparedStatement ps = conn.prepareStatement(sql);
+		        ps.setString(1, formattedDate);
+		        ps.setString(2, formattedDate);
+		        ResultSet rs = ps.executeQuery();
+		        while (rs.next()) {
+		        	if(rs.getString(1) == null) {
+		        		doanhthu = "0";
+		        	}
+		        	else {
+						DecimalFormat decimalFormat = new DecimalFormat("#,###");
+						doanhthu = decimalFormat.format(rs.getString(1));
+		        	}
+		        }
+		    } catch (SQLException e) {
+		        e.printStackTrace();
+		    }
+		    return doanhthu;
+		}
+		
+		//Lấy doanh thu tháng trước
+			public String getDoanhThuThangTruoc() {
+			    LocalDate currentDate = LocalDate.now();
+			    DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd");
+			    String formattedDate = currentDate.format(formatter);
+			    String doanhthu = "";
+			    String sql = "SELECT SUM(CAST(amount AS decimal(18, 0))) " +
+			            "FROM transactions " +
+			            "WHERE WHERE YEAR(create) = YEAR(?) AND MONTH(create) = MONTH(?) - 1";
+			    Connection conn = connectDB.getConnect();
+			    try {
+			        PreparedStatement ps = conn.prepareStatement(sql);
+			        ps.setString(1, formattedDate);
+			        ps.setString(2, formattedDate);
+		
+			        ResultSet rs = ps.executeQuery();
+			        while (rs.next()) {
+			        	if(rs.getString(1) == null) {
+			        		doanhthu = "0";
+			        	}
+			        	else {
+							DecimalFormat decimalFormat = new DecimalFormat("#,###");
+							doanhthu = decimalFormat.format(rs.getString(1));
+			        	}
+			        }
+			    } catch (SQLException e) {
+			        e.printStackTrace();
+			    }
+			    return doanhthu;
+			}
+			
+			//Lấy doanh thu theo ngày
+					public String getDoanhThuTheoNgay(String ngay) {
+					    String doanhthu = "";
+					    String sql = "SELECT SUM(CAST(amount AS decimal(18, 0))) " +
+					            "FROM transactions " +
+					            "WHERE WHERE YEAR(create) = YEAR(?) AND MONTH(create) = MONTH(?) AND DAY(create) = DAY(?)";
+					    Connection conn = connectDB.getConnect();
+					    try {
+					        PreparedStatement ps = conn.prepareStatement(sql);
+					        ps.setString(1, ngay);
+					        ps.setString(2, ngay);
+					        ps.setString(3, ngay);
+				
+					        ResultSet rs = ps.executeQuery();
+					        while (rs.next()) {
+					        	if(rs.getString(1) == null) {
+					        		doanhthu = "0";
+					        	}
+					        	else {
+									DecimalFormat decimalFormat = new DecimalFormat("#,###");
+									doanhthu = decimalFormat.format(rs.getString(1));
+					        	}
+					        }
+					    } catch (SQLException e) {
+					        e.printStackTrace();
+					    }
+					    return doanhthu;
+					}
 }

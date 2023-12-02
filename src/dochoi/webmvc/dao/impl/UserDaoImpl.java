@@ -205,6 +205,32 @@ public class UserDaoImpl extends connectDB implements UserDao {
 	    }
 	    return false;
 	}
+	
+	//Thống kê top 5 khách hàng
+	public List<User> getTop5KH() {
+		List<User> users = new ArrayList<User>();
+		String sql = "SELECT TOP 5 users.name, SUM(CAST(amount AS decimal(18, 0))) AS amount FROM users JOIN transactions AS trans ON trans.user_session = users.username GROUP BY users.name ORDER BY amount DESC";
+		Connection conn = connectDB.getConnect();
+
+		try {
+			PreparedStatement ps = conn.prepareStatement(sql);
+			ResultSet rs = ps.executeQuery();
+
+			while (rs.next()) {
+				User user = new User();
+
+				user.setName(rs.getString(1));  //Tên khách hàng
+				user.setAmount(rs.getString(2)); //Tổng tiền đã mua
+				users.add(user);
+			}
+
+		} catch (SQLException e) {
+			e.printStackTrace();
+			
+		}
+
+		return users; 
+	}
 }
 
 

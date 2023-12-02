@@ -56,6 +56,32 @@ public class TransactionServicesImpl implements TransactionService{
 	public List<Transactions> getByUsername(String username) {
 		return transactionDao.getByUsername(username); 
 	}
+	
+	//DOANH THU
  
+	@Override
+	public String getDoanhThuTheoNgay(String ngay) {
+		return transactionDao.getDoanhThuTheoNgay(ngay);
+	}
+	
+	@Override
+	public String getDoanhThuHomNay() {
+		return transactionDao.getDoanhThuHomNay();
+	}
+	
+	@Override
+	public String getDoanhThuHomQua() {
+		return transactionDao.getDoanhThuHomQua();
+	}
+	
+	@Override
+	public String getDoanhThuThangNay() {
+		return transactionDao.getDoanhThuThangNay();
+	}
+	
+	@Override
+	public String getDoanhThuThangTruoc() {
+		return transactionDao.getDoanhThuThangTruoc();
+	}
 
 }
