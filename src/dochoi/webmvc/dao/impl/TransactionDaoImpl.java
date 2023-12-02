@@ -260,6 +260,9 @@ public class TransactionDaoImpl extends connectDB implements TransactionDao {
 		        while (rs.next()) {
 					DecimalFormat decimalFormat = new DecimalFormat("#,###");
 					doanhthu = rs.getString(1);
+					if(doanhthu==null) {
+						doanhthu="0";
+					}
 		        }
 		    } catch (SQLException e) {
 		        e.printStackTrace();
@@ -290,6 +293,9 @@ public class TransactionDaoImpl extends connectDB implements TransactionDao {
 		        	else {
 						DecimalFormat decimalFormat = new DecimalFormat("#,###");
 						doanhthu = rs.getString(1);	
+						if(doanhthu==null) {
+							doanhthu="0";
+						}
 		        	}
 		        }
 		    } catch (SQLException e) {
