@@ -1,27 +1,18 @@
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
 <%
-  response.setHeader("Cache-control", "no-cache, no-store, must-revalidate");
-  response.setHeader("Pragma" , "no-cache");
-  response.setHeader("Expires" , "0");
-  
-  
-  if (session.getAttribute("admin-username") == null){
-	  response.sendRedirect(request.getContextPath() + "/admin/login");
-  }
-  %>
-  <!-- Start header section -->
-  <jsp:include page = "./header/header.jsp" flush = "true" />
-    <div class="content-wrapper">
-      <div class="container-fluid">
-        <!--End Row-->
+		response.setContentType("application/vnd.ms-excel");
+	response.setHeader("Content-Disposition", "inline; filename=Oder.xls");
+	%>
 
-<button class="add-catalog"><a href="${pageContext.request.contextPath}/admin/product/export_oder_excel">Xuất Excel</a></button>
-        <div class="row">
- 
-          <div class="col-lg-12">
-            <div class="card">
-              <div class="card-body">
+			<div class="card-body">
                 <h5 class="card-title">Danh sách đơn hàng</h5>
                 <div class="table-responsive">
                   <table class="table table-striped">
@@ -38,7 +29,7 @@
                          <th scope="col">Phương thức thanh toán</th>
                          <th scope="col">Trạng thái</th>
                           <th scope="col">Ngày tạo</th>
-                           <th scope="col">Hành động</th>
+                      
                         
                       </tr>
                     </thead>
@@ -82,21 +73,12 @@
                            <td>${order.created}</td>
                            
         				
-        				 <td>
-                         <button class="btn btn-danger"><a href="${pageContext.request.contextPath}/admin/order/delete?id=${order.id}">Xóa</a></button>
-                         
-                          <button class="btn btn-success"><a href="${pageContext.request.contextPath}/admin/order/edit?id=${order.id}">Sửa</a></button>
-                        </td>
+        				
                      </tr>
                     </c:forEach>
                     </tbody>
                   </table>
                 </div>
               </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
- 
-    <jsp:include page = "./footer/footer.jsp" flush = "true" />
+</body>
+</html>

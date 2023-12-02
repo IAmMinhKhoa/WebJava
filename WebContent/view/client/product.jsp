@@ -87,6 +87,17 @@
               <!-- / quick view modal -->   
             </div>
             
+            
+            
+            <!-- HTML PHÂN TRANG -->
+				 <div id="pagination">
+				    <button id="prevPage">Prev</button>
+				    <span id="currentPage"></span>
+				    <button id="nextPage">Next</button>
+				</div>
+				
+				
+				
           </div>
         </div>
         <div class="col-lg-3 col-md-3 col-sm-4 col-md-pull-9">
@@ -158,7 +169,82 @@
       </div>
     </div>
   </section>
-  <!-- / product category -->
+  
+  
+  
+  
+  <!-- JS CONTROLLER PHÂN TRANG  -->
+  
+  <script>
+    var currentPage = 1; // Trang hiện tại
+    var productsPerPage = 8; // Số sản phẩm hiển thị trên mỗi trang
+    var totalProducts = ${productlist.size()}; // Tổng số sản phẩm
+
+    var prevPageBtn = document.getElementById("prevPage");
+    var nextPageBtn = document.getElementById("nextPage");
+    var currentPageSpan = document.getElementById("currentPage");
+
+    // Xử lý sự kiện nhấn nút "Prev"
+    prevPageBtn.addEventListener("click", function() {
+        if (currentPage > 1) {
+            currentPage--;
+            showProducts();
+        }
+    });
+
+    // Xử lý sự kiện nhấn nút "Next"
+    nextPageBtn.addEventListener("click", function() {
+        var maxPage = Math.ceil(totalProducts / productsPerPage);
+        if (currentPage < maxPage) {
+            currentPage++;
+            showProducts();
+        }
+    });
+
+    // Hiển thị danh sách sản phẩm cho trang hiện tại
+    function showProducts() {
+        var productList = document.getElementsByClassName("aa-product-catg")[0];
+        var products = productList.getElementsByTagName("li");
+
+        var startIndex = (currentPage - 1) * productsPerPage;
+        var endIndex = startIndex + productsPerPage;
+
+        // Ẩn tất cả các sản phẩm
+        for (var i = 0; i < products.length; i++) {
+            products[i].style.display = "none";
+        }
+
+        // Hiển thị sản phẩm cho trang hiện tại
+        for (var j = startIndex; j < endIndex+1; j++) {
+            if (j < products.length) {
+                products[j].style.display = "block";
+            }
+        }
+
+        // Cập nhật trạng thái phân trang
+        currentPageSpan.textContent = currentPage;
+
+        // Kiểm tra và ẩn/hiện các nút phân trang
+        prevPageBtn.disabled = (currentPage === 1);
+        nextPageBtn.disabled = (currentPage === Math.ceil(totalProducts / productsPerPage));
+    }
+
+    // Hiển thị sản phẩm cho trang ban đầu
+    showProducts();
+</script>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+<!-- / product category -->
 <!--  end content-->
   
 <!--  footer-->

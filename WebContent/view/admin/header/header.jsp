@@ -9,7 +9,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
   <meta name="description" content="" />
   <meta name="author" content="" />
-  <title>Admin web nông sản</title>
+  <title>Admin web bán đồ chơi</title>
 
   <link href="${url}/css/pace.min.css" rel="stylesheet" />
   <script src="${url}/js/pace.min.js"></script>
@@ -63,7 +63,7 @@
                     <div class="avatar"><img class="align-self-start mr-3" src="${pageContext.request.contextPath}/view/admin/assets/images/avatar-admin.png"
                         alt="user avatar"></div>
                     <div class="media-body">
-                      <h6 class="mt-2 user-title">Webnongsan</h6>
+                      <h6 class="mt-2 user-title">Web Chơi Đồ</h6>
                 	<b> Admin:  <%=session.getAttribute("admin-username") %></b>                         
                     </div>
                   </div>

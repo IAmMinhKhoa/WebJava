@@ -4831,3 +4831,29 @@ label {
 }
 
 
+
+
+
+
+/*CSS CÁI PHÂN TRANG*/
+#pagination {
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+#prevPage, #nextPage {
+  padding: 8px 16px;
+  background-color: #f2f2f2;
+  border: none;
+  cursor: pointer;
+}
+
+#currentPage {
+  font-weight: bold;
+  margin: 0 10px;
+}
+
+#prevPage:hover, #nextPage:hover {
+  background-color: rgb(128, 255, 255);
+}

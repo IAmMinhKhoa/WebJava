@@ -44,16 +44,16 @@
                   <div class="aa-footer-widget">
                     <h3>LIÊN HỆ</h3>
                     <address>
-                      <p>Khu phố 6 - P.Linh Trung - Q.Thủ Đức - TP HCM</p>
-                      <p><span class="fa fa-phone"></span>037.7026.186</p>
+                      <p>Trường Đại Học Sài Gòn</p>
+                      <p><span class="fa fa-phone"></span>069.696.696</p>
                       <p><span class="fa fa-envelope"></span>webbandochoi@gmail.com</p>
                     </address>
-                    <div class="aa-footer-social">
+                    <!-- <div class="aa-footer-social">
                       <a href="#"><span class="fab fa-facebook"></span></a>
                       <a href="#"><span class="fab fa-youtube"></span></a>
                       <a href="#"><span class="fab fa-instagram"></span></a>
                       <a href="#"><span class="fab fa-skype"></span></a>
-                    </div>
+                    </div> -->
                   </div>
                 </div>
               </div>
@@ -69,7 +69,7 @@
         <div class="row">
         <div class="col-md-12">
           <div class="aa-footer-bottom-area">
-            <p>Copyright 2020 &copy VT3 Team</p>
+          
             <div class="aa-footer-payment">
               <span class="fab fa-cc-mastercard"></span>
               <span class="fab fa-cc-visa"></span>

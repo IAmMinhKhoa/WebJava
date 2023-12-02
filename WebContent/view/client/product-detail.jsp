@@ -69,7 +69,7 @@
 	                    </c:otherwise>
 	                     </c:choose>
                    
-                       <p class="aa-product-avilability">Tình trạng: <span>
+                       <%-- <p class="aa-product-avilability">Tình trạng: <span>
                       			<c:choose>
 			                        <c:when test="${detail_product.status == 1}"> 
 			                        	<c:out value="Còn hàng"/>
@@ -78,7 +78,7 @@
 								        <c:out value="Hết hàng"/>
 								    </c:otherwise>
 		                       	</c:choose>
-                      </span></p> 
+                      </span></p>  --%>
                       
                       <p class="aa-product-quantily" id="Count_Quantity">Số Lượng: <span>
                       			<c:choose>
@@ -189,14 +189,14 @@
 	                      <h4 class="aa-product-title"><a href="${pageContext.request.contextPath}/view/client/product-detail?id=${product.id}">${product.name}</a></h4>
 	                     
 						<c:choose>
-						<c:when test="${product.discount == 0}">
-	                      <span class="aa-product-price">${product.price} <u>VNĐ</u></span><span class="aa-product-price"></span> 
-	                    </c:when>
+							<c:when test="${product.discount == 0}">
+		                      <span class="aa-product-price">${product.price} <u>VNĐ</u></span><span class="aa-product-price"></span> 
+		                    </c:when>
 	                    <c:otherwise>
 	                      <c:forEach items="${productlist1}" var="product1">
 	                      	<c:if test="${product1.id == product.id}">
-		                      <span class="aa-product-price">${product1.price} VNĐ</span>
-		                      <span class="aa-product-price">${product.price} VNĐ</span>
+		                      <span class="aa-product-price">${product1.price} VNĐ</span> <!-- GIÁ SAU KHI GIẢM KHUYẾN MÃI  -->
+		                     <%--  <span class="aa-product-price">${product.price} VNĐ</span> --%>
 	                      </c:if>
 	                      </c:forEach>
 	                    </c:otherwise>

@@ -5,7 +5,7 @@
       <div class="brand-logo">
         <a href="${pageContext.request.contextPath}/admin/homepage">
           <img src="${url}/images/logo-icon.png" class="logo-icon" alt="logo icon">
-          <h5 class="logo-text">Admin Web Nông Sản</h5>
+          <h5 class="logo-text">Admin Web Bán Đồ Chơi</h5>
         </a>
       </div>
       <ul class="sidebar-menu do-nicescrol">

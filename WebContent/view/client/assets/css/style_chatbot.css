@@ -3,17 +3,17 @@
   width: 100%;
   margin-top: 20px;
   margin-bottom: 50px;
-  height: 500px;
+  height: 550px;
 }
 
 #chat-window {
-  max-width: 500px;
+  max-width: 600px;
   margin: auto;
   background-color: #fff;
   border-radius: 8px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   padding: 20px;
-  height: 500px;
+  height: 570px;
 }
 
 .main-title {
@@ -25,7 +25,7 @@
 }
 
 #chat-messages {
-  height: 370px;
+  height: 445px;
   overflow-y: scroll;
   margin-bottom: 10px;
   border: 1px solid #ccc;
@@ -39,7 +39,7 @@
 
 #chat-input {
   flex: 1;
-  border: none;
+  border: 1px solid #ccc;
   padding: 8px;
   border-radius: 4px;
 }
@@ -62,7 +62,13 @@
   display: flex;
   align-items: center;
   margin-bottom: 10px;
+  margin-top: 10px;
+  background-color: #e2e2e2;
 }
+ .message.bot-message {
+	 background-color: rgb(128, 255, 255);
+ }
+
 
 #icon_chatbot {
   width: 40px;
@@ -73,7 +79,7 @@
 
 .message.user-message span {
   font-size: 18px;
-  line-height: 1.4;
+  line-height: 1.9;
   background-color: #e2e2e2;
   border-radius: 4px;
   padding: 8px;
@@ -82,9 +88,33 @@
 
 .message.bot-message span {
   font-size: 18px;
-  line-height: 1.4;
-  background-color: rgb(128, 255, 255);
+  line-height: 1.9;
+  /*background-color: rgb(128, 255, 255);*/
   border-radius: 4px;
   padding: 8px;
   margin-top: 5px;
 }
+
+
+
+
+
+
+
+
+
+/* CSS cho combobox */
+    #chat-options {
+		margin-left: 5px;
+        padding: 8px;
+        font-size: 16px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        width: 180px; /* Độ rộng của combobox */
+         overflow: hidden; /* Ẩn phần nội dung vượt quá độ rộng */
+    }
+
+    /* CSS cho các option trong combobox */
+    #chat-options option {
+        padding: 8px;
+    }

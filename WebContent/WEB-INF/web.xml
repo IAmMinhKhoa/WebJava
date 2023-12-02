@@ -148,6 +148,32 @@
    
    
    <servlet>
+       <servlet-name>export_product_excel</servlet-name>
+       <servlet-class>dochoi.webmvc.controller.admin.ProductExportExcel</servlet-class>
+   </servlet>
+   
+    <servlet-mapping>
+       <servlet-name>export_product_excel</servlet-name>
+       <url-pattern>/admin/product/export_product_excel</url-pattern>
+   </servlet-mapping>
+   
+   
+   
+   
+   <servlet>
+       <servlet-name>export_oder_excel</servlet-name>
+       <servlet-class>dochoi.webmvc.controller.admin.OderExportExcel</servlet-class>
+   </servlet>
+   
+    <servlet-mapping>
+       <servlet-name>export_oder_excel</servlet-name>
+       <url-pattern>/admin/product/export_oder_excel</url-pattern>
+   </servlet-mapping>
+   
+   
+   
+   
+   <servlet>
        <servlet-name>listProduct</servlet-name>
        <servlet-class>dochoi.webmvc.controller.admin.ProductListController</servlet-class>
    </servlet>
