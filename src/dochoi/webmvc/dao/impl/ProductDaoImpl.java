@@ -343,4 +343,26 @@ public class ProductDaoImpl extends connectDB implements ProductDao {
 		return products;
 	}
 
+	@Override
+	public List<Product> getTop5HighestQuantity() {
+		List<Product> products = new ArrayList<Product>();
+		String sql = "SELECT TOP 5 product.id,product.name ,product.quantity FROM product ORDER BY product.quantity DESC";
+		Connection con = connectDB.getConnect();
+		try {
+			PreparedStatement ps = con.prepareStatement(sql); 
+			ResultSet rs = ps.executeQuery();
+			while(rs.next())
+			{
+				Product product = new Product();
+				product.setId(rs.getString(1));
+				product.setName(rs.getString(2));
+				product.setQuantity(rs.getInt(3));
+				products.add(product);
+			}
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		return products;
+	}
+
 }

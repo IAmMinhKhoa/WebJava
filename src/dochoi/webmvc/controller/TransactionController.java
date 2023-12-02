@@ -56,6 +56,9 @@ public class TransactionController extends HttpServlet {
 		String tr_created = req.getParameter("transaction_created");
 		int tr_status = 1;
 
+		
+		int temp_amount=convertStringToNumber(tr_amount);
+		System.out.println(temp_amount);
 		Transactions transaction = new Transactions();
 		transaction.setUser_session(tr_usersession);
 		transaction.setUser_name(tr_username);
@@ -63,7 +66,7 @@ public class TransactionController extends HttpServlet {
 		transaction.setUser_phone(tr_userphone);
 		transaction.setAddress(tr_useraddress);
 		transaction.setMessage(tr_usermess);
-		transaction.setAmount(tr_amount);
+		transaction.setAmount(String.valueOf(temp_amount));
 		transaction.setPayment(tr_payment);
 		transaction.setCreated(tr_created);
 		transaction.setStatus(tr_status);
@@ -113,5 +116,11 @@ public class TransactionController extends HttpServlet {
 		
 	}
 
-
+protected int convertStringToNumber(String input) {
+	 String cleanStr = input.replace(".", "");
+	 int number = Integer.parseInt(cleanStr);
+	 return number;
+}
+	
+	
 }

@@ -29,4 +29,6 @@ public interface ProductDao {
 	
 	//THỐNG KÊ
 	List<Product> getTop5Product();
+	List<Product> getTop5HighestQuantity();
+	
 }

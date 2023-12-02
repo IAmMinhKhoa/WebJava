@@ -245,10 +245,11 @@ public class TransactionDaoImpl extends connectDB implements TransactionDao {
 		    LocalDate currentDate = LocalDate.now();
 		    DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd");
 		    String formattedDate = currentDate.format(formatter);
+		    //System.out.println(formattedDate);
 		    String doanhthu = "";
 		    String sql = "SELECT SUM(CAST(amount AS decimal(18, 0))) " +
 		            "FROM transactions " +
-		            "WHERE WHERE YEAR(create) = YEAR(?) AND MONTH(create) = MONTH(?) AND DAY(create) = DAY(?)";
+		            "WHERE YEAR(created ) = YEAR(?) AND MONTH(created ) = MONTH(?) AND DAY(created ) = DAY(?)";
 		    Connection conn = connectDB.getConnect();
 		    try {
 		        PreparedStatement ps = conn.prepareStatement(sql);
@@ -258,7 +259,7 @@ public class TransactionDaoImpl extends connectDB implements TransactionDao {
 		        ResultSet rs = ps.executeQuery();
 		        while (rs.next()) {
 					DecimalFormat decimalFormat = new DecimalFormat("#,###");
-					doanhthu = decimalFormat.format(rs.getString(1));
+					doanhthu = rs.getString(1);
 		        }
 		    } catch (SQLException e) {
 		        e.printStackTrace();
@@ -274,7 +275,7 @@ public class TransactionDaoImpl extends connectDB implements TransactionDao {
 		    String doanhthu = "";
 		    String sql = "SELECT SUM(CAST(amount AS decimal(18, 0))) " +
 		            "FROM transactions " +
-		            "WHERE WHERE YEAR(create) = YEAR(?) AND MONTH(create) = MONTH(?) AND DAY(create) = DAY(?) - 1";
+		            "WHERE  YEAR(created ) = YEAR(?) AND MONTH(created ) = MONTH(?) AND DAY(created ) = DAY(?) - 1";
 		    Connection conn = connectDB.getConnect();
 		    try {
 		        PreparedStatement ps = conn.prepareStatement(sql);
@@ -288,7 +289,7 @@ public class TransactionDaoImpl extends connectDB implements TransactionDao {
 		        	}
 		        	else {
 						DecimalFormat decimalFormat = new DecimalFormat("#,###");
-						doanhthu = decimalFormat.format(rs.getString(1));	
+						doanhthu = rs.getString(1);	
 		        	}
 		        }
 		    } catch (SQLException e) {
@@ -305,7 +306,7 @@ public class TransactionDaoImpl extends connectDB implements TransactionDao {
 		    String doanhthu = "";
 		    String sql = "SELECT SUM(CAST(amount AS decimal(18, 0))) " +
 		            "FROM transactions " +
-		            "WHERE WHERE YEAR(create) = YEAR(?) AND MONTH(create) = MONTH(?)";
+		            "WHERE YEAR(created ) = YEAR(?) AND MONTH(created ) = MONTH(?)";
 		    Connection conn = connectDB.getConnect();
 		    try {
 		        PreparedStatement ps = conn.prepareStatement(sql);
@@ -318,7 +319,7 @@ public class TransactionDaoImpl extends connectDB implements TransactionDao {
 		        	}
 		        	else {
 						DecimalFormat decimalFormat = new DecimalFormat("#,###");
-						doanhthu = decimalFormat.format(rs.getString(1));
+						doanhthu = rs.getString(1);
 		        	}
 		        }
 		    } catch (SQLException e) {
@@ -335,7 +336,7 @@ public class TransactionDaoImpl extends connectDB implements TransactionDao {
 			    String doanhthu = "";
 			    String sql = "SELECT SUM(CAST(amount AS decimal(18, 0))) " +
 			            "FROM transactions " +
-			            "WHERE WHERE YEAR(create) = YEAR(?) AND MONTH(create) = MONTH(?) - 1";
+			            "WHERE  YEAR(created ) = YEAR(?) AND MONTH(created ) = MONTH(?) - 1";
 			    Connection conn = connectDB.getConnect();
 			    try {
 			        PreparedStatement ps = conn.prepareStatement(sql);
@@ -349,7 +350,7 @@ public class TransactionDaoImpl extends connectDB implements TransactionDao {
 			        	}
 			        	else {
 							DecimalFormat decimalFormat = new DecimalFormat("#,###");
-							doanhthu = decimalFormat.format(rs.getString(1));
+							doanhthu = rs.getString(1);
 			        	}
 			        }
 			    } catch (SQLException e) {
@@ -363,7 +364,7 @@ public class TransactionDaoImpl extends connectDB implements TransactionDao {
 					    String doanhthu = "";
 					    String sql = "SELECT SUM(CAST(amount AS decimal(18, 0))) " +
 					            "FROM transactions " +
-					            "WHERE WHERE YEAR(create) = YEAR(?) AND MONTH(create) = MONTH(?) AND DAY(create) = DAY(?)";
+					            "WHERE WHERE YEAR(created ) = YEAR(?) AND MONTH(created ) = MONTH(?) AND DAY(created ) = DAY(?)";
 					    Connection conn = connectDB.getConnect();
 					    try {
 					        PreparedStatement ps = conn.prepareStatement(sql);
@@ -378,7 +379,7 @@ public class TransactionDaoImpl extends connectDB implements TransactionDao {
 					        	}
 					        	else {
 									DecimalFormat decimalFormat = new DecimalFormat("#,###");
-									doanhthu = decimalFormat.format(rs.getString(1));
+									doanhthu = rs.getString(1);
 					        	}
 					        }
 					    } catch (SQLException e) {

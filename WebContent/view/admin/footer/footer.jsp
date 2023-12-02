@@ -11,7 +11,7 @@
   <script src="${url}/js/jquery.loading-indicator.js"></script>
   <script src="${url}/js/app-script.js"></script>
   <script src="${url}/plugins/Chart.js/Chart.min.js"></script>
-  <script src="${url}/js/index.js"></script>
+<%--   <script src="${url}/js/index.js"></script> --%>
   <script src="${url}/plugins/summernote/dist/summernote-bs4.min.js"></script>
 </body>
 

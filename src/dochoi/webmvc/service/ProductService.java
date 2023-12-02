@@ -30,5 +30,6 @@ public interface ProductService {
 
 	//THỐNG KÊ
 	List<Product> getTop5Product();
+	List<Product> getTop5HighestQuantity();
 }
 
