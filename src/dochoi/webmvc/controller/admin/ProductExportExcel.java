@@ -28,7 +28,7 @@ public class ProductExportExcel extends HttpServlet {
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		List<Product> productList = productService.getAll();
 		req.setAttribute("productlist", productList);
-		RequestDispatcher dispatcher = req.getRequestDispatcher("/view/admin/report_oder_excel.jsp");
+		RequestDispatcher dispatcher = req.getRequestDispatcher("/view/admin/report_product_excel.jsp");
 		dispatcher.forward(req, resp);
 	}
 }

@@ -17,11 +17,11 @@ form.addEventListener("submit", async (e) => {
     {
 		messages:[{role:'user', content:message}],
 		model:'gpt-3.5-turbo-1106',
-		temperature: 0.2,
+		temperature: 0.5,
 		max_tokens:900,
 		top_p: 1,
-     	frequency_penalty: 0.2,
-      presence_penalty: 0.2,
+     	frequency_penalty: 0.1,
+      presence_penalty: 0.3,
 	},
 	{
 		headers:{

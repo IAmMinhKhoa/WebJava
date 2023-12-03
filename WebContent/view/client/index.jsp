@@ -481,7 +481,7 @@
   </section>
   <!-- / Support section -->
   <!-- Testimonial -->
-  <%-- <section id="aa-testimonial">  
+   <section id="aa-testimonial">  
     <div class="container">
       <div class="row">
         <div class="col-md-12">
@@ -492,23 +492,24 @@
                 <div class="aa-testimonial-single">
                 <img class="aa-testimonial-img" src="${url}/images/avatar.jpg" alt="avatar 1">
                   <span class="fa fa-quote-left aa-testimonial-quote"></span>
-                  <p>Tôi đã mua hàng ở cửa hàng khá nhiều lần rồi, và tôi cảm thấy sản phẩm của cửa hàng 
-                    được giao khá nhanh và sản phẩm thì tốt.</p>
+                  <p>Cuộc đời này tôi chưa thấy chổ nào bán đồ chơi mà phê hơn chơi đồ như thế này !!!.</p>
                   <div class="aa-testimonial-info">
-                    <p>Ngọc Huy</p>
-                    <span>Nhân viên kinh doanh</span>
+                    <p>Minh Khoa</p>
+                    <span>IT 25 năm kinh nghiệm	</span>
                   </div>
                 </div>
               </li>
               <!-- single slide -->
               <li>
                 <div class="aa-testimonial-single">
-                <img class="aa-testimonial-img" src="${url}/images/avater-2.jpg" alt="avatar 2">
+                <img class="aa-testimonial-img" src="${url}/images/avatar-2.jpg" alt="avatar 2">
                   <span class="fa fa-quote-left aa-testimonial-quote"></span>
-                  <p> Về chất lượng của sản phẩm thì khỏi phải bàn, đảm bảo an toàn cho trẻ em và giúp chúng phát triển kỹ rất tích cực.. Tôi sẽ mua hàng ở đây thường xuyên<p>
+                  <p> Tao đánh đổi màn đêm yên giấc viết những bài nhạc hay nhất cuộc đời
+Di sản là nguồn cảm hứng, fan theo răm rắp nhạc tao thuộc lờiao đánh đổi màn đêm yên giấc viết những bài nhạc hay nhất cuộc đời
+Di sản là nguồn cảm hứng, fan theo răm rắp nhạc tao thuộc lời<p>
                   <div class="aa-testimonial-info">
-                    <p>Mỹ Tân</p>
-                    <span>Diễn Viên</span>
+                    <p>Obito</p>
+                    <span>Rapper Tháng 8</span>
                   </div>
                 </div>
               </li>
@@ -517,10 +518,12 @@
                 <div class="aa-testimonial-single">
                 <img class="aa-testimonial-img" src="${url}/images/avatar-1.jpg" alt="avatar 3">
                   <span class="fa fa-quote-left aa-testimonial-quote"></span>
-                  <p>Nhiều lần đi làm bận rộn, không có thời gian đi đến tận nơi mua cho bé nên tôi thường mua hàng online ở đây. Chất lượng sản phẩm và dịch vụ ở đây rất là tốt!</p>
+                  <p>Thế giới này là của anh và anh có quyền đi với em
+Bật sáng tất cả đèn xanh, anh chạy thật nhanh
+Với em kế bên vai và chai champaine em cầm trên tay</p>
                   <div class="aa-testimonial-info">
-                    <p>Oanh Oanh</p>
-                    <span>Giáo viên</span>
+                    <p>Wowy (Nịnh Vương)</p>
+                    <span>Ráp Pơ</span>
                   </div>
                 </div>
               </li>
@@ -529,7 +532,7 @@
         </div>
       </div>
     </div>
-  </section> --%>
+  </section> 
   <!-- / Testimonial -->
 
 

@@ -41,7 +41,7 @@
 							<p class="title-detail">Thông tin tài khoản</p>
 							<p class="name_account"><span>Họ và tên: </span>${name}</p>
 							<p class="email "><span>Email: </span>${email}</p>
-							<p><span>Ngày sinh: </span>21/07/2002</p>	
+					<!-- 		<p><span>Ngày sinh: </span>21/07/2002</p>	 -->
 							<p><span>Điện thoại: </span>${phone}</p>
 								
 															

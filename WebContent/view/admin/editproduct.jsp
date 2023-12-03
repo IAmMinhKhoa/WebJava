@@ -89,7 +89,7 @@
                     <label for="input-1">Ảnh đại diện</label>
                     <%-- <input type="text" class="form-control" id="input-1" placeholder="Tên hình" name="product-image" value="${product.image_link}"> --%>
                     
-                    <input type="file" class="form-control" id="input-1" placeholder="Tên hình" name="product-image" value="${product.image_link}" required>
+                    <input type="file" class="form-control" id="input-1" placeholder="Tên hình" name="product-image" value="${product.image_link}" >
                   </div>
               
               

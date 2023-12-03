@@ -67,7 +67,18 @@
                       </tr>
                       <tr>
                         <td colspan="7" class="aa-cart-view-bottom">
-                          <input class="aa-cart-view-btn" type="submit" value="Cập nhật giỏ hàng">
+                        
+		                    <c:choose>
+							    <c:when test="${not empty sumprice}">
+							        <input class="aa-cart-view-btn" type="submit" value="Cập nhật giỏ hàng">
+							    </c:when>
+							    <c:otherwise>
+							        
+							    </c:otherwise>
+							</c:choose>
+                        
+                        
+                          
                         </td>
                       </tr>
                      
@@ -94,7 +105,15 @@
                    </tr>
                  </tbody>
                </table>
-               <a href="${pageContext.request.contextPath}/view/client/checkout" class="aa-cart-view-btn">Thanh toán</a>
+	               <c:choose>
+					    <c:when test="${not empty sumprice}">
+					        <a href="${pageContext.request.contextPath}/view/client/checkout" class="aa-cart-view-btn">Thanh toán</a>
+					    </c:when>
+					    <c:otherwise>
+					        <h1>Bạn chưa chọn sản phẩm nào !!!</h1>
+					    </c:otherwise>
+					</c:choose>
+               
              </div>
            </div>
          </div>

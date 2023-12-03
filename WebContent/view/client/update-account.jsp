@@ -52,10 +52,10 @@
 								<label>Số điện thoại:</label>
 								<input class="form-control" autocomplete="off" pattern="[0-9]{10}" required="" data-errormessage-value-missing="Bạn chưa nhập số điện thoại" data-errormessage-type-mismatch="Số điện thoại chưa đúng định dạng!" type="tel" value="${phone }" placeholder="Số điện thoại (*)" name="phone" id="phone_ac" size="30">
 							</div>
-							<div class="mb-3">
+							<!-- <div class="mb-3">
 								<label>Ngày sinh:</label>
 								<input class="form-control" autocomplete="off" required="" data-errormessage-value-missing="Bạn chưa nhập ngày sinh" data-errormessage-type-mismatch="Ngày sinh chưa đúng định dạng!" type="date" placeholder="Ngày sinh (*)" name="birthday" size="30">
-							</div>
+							</div> -->
 							<div id="error" class="alert alert-warning text-center d-none" style="color: #f00;"></div>
 							<div id="info" class="alert alert-warning text-center d-none"></div>
 							<p style="color:red; display: block;"><%=(request.getAttribute("Message") == null) ? ""
