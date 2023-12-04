@@ -11,11 +11,14 @@ form.addEventListener("submit", async (e) => {
 
   // Use axios library to make a POST request to the OpenAI API
   const response = await axios.post(
-    
-    
     'https://api.openai.com/v1/chat/completions',
     {
-		messages:[{role:'user', content:message}],
+	
+		
+		 messages: [
+            { role: 'user', content: 'Bây giờ bạn hãy hóa thân thành 1 nhân viên tư vấn bán hàng web bán đồ chơi cho trẻ em.' },
+            { role: 'user', content: message }
+        ],
 		model:'gpt-3.5-turbo-1106',
 		temperature: 0.5,
 		max_tokens:900,
@@ -27,17 +30,15 @@ form.addEventListener("submit", async (e) => {
 		headers:{
 			'Content-Type': "application/json",
 			Authorization:`Bearer ${apiKey}`,
-			
 		},
 	}
-    
   );
  
-  const chatbotResponse = response.data.choices[0].message.content;
+  const chatbotResponse = response.data.choices[0].message.content.replace(/\n/g, "<br>");
 console.log(chatbotResponse);
 
   messages.innerHTML += `<div class="message bot-message"><img id="icon_chatbot"  src="./assets/images/news/chatbot.png" alt="bot icon"> <span>${chatbotResponse}</span></div>`;
-});
+});	
 
 /*"https://api.openai.com/v1/chat/completions",
     {

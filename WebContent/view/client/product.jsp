@@ -39,7 +39,10 @@
                  	<p style="margin-left: 30px">Chưa có sản phẩm!</p>
                  </c:if>
                 <c:forEach items="${productlist}" var="product">
-	                <li>
+	                
+	                	<c:choose>
+						    <c:when test="${product.status==1}">
+						        <li>
 	                  <figure>
 	                    <a class="aa-product-img" href="${pageContext.request.contextPath}/view/client/product-detail?id=${product.id}"><img src="${pageContext.request.contextPath}/view/client/assets/images/products/img-test/${product.image_link}" alt="${product.name}"></a>
 	                    
@@ -81,6 +84,15 @@
 	                  </c:if>
 	                  
 	                </li>
+						    </c:when>
+						   
+						    <c:otherwise>
+						       
+						    </c:otherwise>
+						</c:choose>
+	                
+	                
+	                
                 </c:forEach>                                       
               </ul>
 

@@ -50,12 +50,31 @@
                     <tbody>
                      <c:forEach items="${productlist}" var="product">
                       <tr>
-                        <th scope="row">${product.id }</th>
-                        <td>${product.name }</td>
-                        <td><img style="    width: 110px;height: 67px; object-fit: cover;border: 1px solid #fff;" src="${pageContext.request.contextPath}/view/client/assets/images/products/img-test/${product.image_link}" alt="${product.name}"></td>
-                        <td>${product.catalog_id }</td>
-                        <td>${product.price }</td>
                         
+                        
+                        <c:choose>
+	                        <c:when test="${product.status == 1}"> 
+	                        	<th scope="row">${product.id }</th>
+		                        <td>${product.name }</td>
+		                        <td><img style="    width: 110px;height: 67px; object-fit: cover;border: 1px solid #fff;" src="${pageContext.request.contextPath}/view/client/assets/images/products/img-test/${product.image_link}" alt="${product.name}"></td>
+		                        <td>${product.catalog_id }</td>
+		                        <td>${product.price }</td>
+		                        
+		                        <td>${product.quantity }</td>
+                       	
+                        
+		                        <td>${product.discount }%</td>
+		                        <td>${product.created }</td>
+		                        <td>
+		                           <button class="btn btn-danger"><a href="${pageContext.request.contextPath}/admin/product/delete?id=${product.id}">Xóa</a></button>
+		                         
+		                          <button class="btn btn-success"><a href="${pageContext.request.contextPath}/admin/product/edit?id=${product.id}">Sửa</a></button>
+                        		</td>
+	                       	</c:when>
+	                       	<c:otherwise>
+						        
+						    </c:otherwise>
+                       	</c:choose> 
                         
                         <%-- <c:choose>
 	                        <c:when test="${product.status == 1}"> 
@@ -65,16 +84,7 @@
 						        <c:out value="Hết hàng"/>
 						    </c:otherwise>
                        	</c:choose> --%>
-                       	<td>    ${product.quantity }</td>
                        	
-                        
-                        <td>${product.discount }%</td>
-                        <td>${product.created }</td>
-                        <td>
-                            <button class="btn btn-danger"><a href="${pageContext.request.contextPath}/admin/product/delete?id=${product.id}">Xóa</a></button>
-                         
-                          <button class="btn btn-success"><a href="${pageContext.request.contextPath}/admin/product/edit?id=${product.id}">Sửa</a></button>
-                        </td>
                       </tr>
                       </c:forEach>
                      

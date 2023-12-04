@@ -39,7 +39,7 @@
                 <div class="aa-promo-right">
                   <div class="aa-single-promo-right">
                     <div>                          
-                    	<a href="/do-an-java/view/client/product-id?id=1">
+                    	<a href="/do-an-java/view/client/product-id?id=4">
                     		<div class="aa-promo-banner">
 	                     	 	<img src="${url}/images/section2_tc.png" alt="">       
                     		</div>                
@@ -57,7 +57,7 @@
                     		</div>                
 	                    </a>                	
                     	<div class="aa-promo-text">
-	                      	<span>Đồ chơi điều khiển</span>                                    
+	                      	<span>Đồ chơi lắp ráp</span>                                    
                     	</div>
                     </div>
                   </div>
@@ -69,19 +69,19 @@
                     		</div>                
 	                    </a>                	
                     	<div class="aa-promo-text">
-	                      	<span>Đồ chơi lắp ráp</span>                                    
+	                      	<span>Đồ chơi thời trang</span>                                    
                     	</div>
                     </div>
                   </div>
                   <div class="aa-single-promo-right">
                     <div>                          
-                    	<a href="/do-an-java/view/client/product-id?id=4">
+                    	<a href="/do-an-java/view/client/product-id?id=6">
                     		<div class="aa-promo-banner">
 	                     	 	<img src="${url}/images/section5_tc.png" alt="">       
                     		</div>                
 	                    </a>                	
                     	<div class="aa-promo-text">
-	                      	<span>Đồ chơi trí tuệ</span>                                    
+	                      	<span>Đồ chơi phương tiện</span>                                    
                     	</div>
                     </div>
                   </div>
@@ -104,10 +104,10 @@
               <div class="aa-product-inner">
                 <!-- start prduct navigation -->
                  <ul class="nav nav-tabs aa-products-tab">
-                    <li class="active"><a href="#robot" data-toggle="tab">Robot</a></li>
-                    <li><a href="#thubong" data-toggle="tab">Thú Bông</a></li>
-                    <li><a href="#hoctap" data-toggle="tab">Học tập </a></li>
-                    <li><a href="#vandong" data-toggle="tab">Vận động</a></li>
+                    <li class="active"><a href="#robot" data-toggle="tab">Các Mẫu Đồ Chơi Cực Hot</a></li>
+                    <!-- <li><a href="#thubong" data-toggle="tab">lắp Ráp</a></li>
+                    <li><a href="#hoctap" data-toggle="tab">Thời Trang </a></li>
+                    <li><a href="#vandong" data-toggle="tab">Búp Bê</a></li> -->
                   </ul>
                   <!-- Tab panes -->
                   <div class="tab-content">

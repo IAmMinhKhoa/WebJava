@@ -150,7 +150,7 @@
                   <div class="aa-payment-method">                    
                     <label for="cashdelivery"><input type="radio" id="cashdelivery" name="transaction_payment" checked value="0">Giao hàng tận nơi</label>
                    
-                    <img src="${pageContext.request.contextPath}/view/client/assets/img/paypal.jpg" border="0" alt="PayPal Acceptance Mark">    
+                    <%-- <img src="${pageContext.request.contextPath}/view/client/assets/img/paypal.jpg" border="0" alt="PayPal Acceptance Mark"> --%>    
                     <input type="submit" value="Đặt hàng" class="aa-browse-btn">
                   </div>
                    <c:if test="${sessionScope.username != null && sessionScope.order == null}">

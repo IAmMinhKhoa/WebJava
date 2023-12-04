@@ -77,7 +77,9 @@ public class ProductDaoImpl extends connectDB implements ProductDao {
 
 	@Override
 	public void delete(String id) {
-		String sql = "DELETE FROM product WHERE id = ?";
+		//String sql = "DELETE FROM product WHERE id = ?";
+		
+		String sql = "update product set status=0 where id=?";
 		new connectDB();
 		Connection conn = connectDB.getConnect();
 		try {

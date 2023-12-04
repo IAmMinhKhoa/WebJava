@@ -1439,7 +1439,7 @@ a.aa-product-img img {
 }
 
 #Count_Quantity{
-	font-size: 20px;
+	font-size: 16px;
   font-weight: bold;
 }
 #quick-view-modal .modal-content .aa-product-view-content .aa-prod-view-size a {
@@ -4856,4 +4856,9 @@ label {
 
 #prevPage:hover, #nextPage:hover {
   background-color: rgb(128, 255, 255);
+}
+
+
+.aa-product-catg li .aa-product-price strong{
+	font-size: 23px;
 }

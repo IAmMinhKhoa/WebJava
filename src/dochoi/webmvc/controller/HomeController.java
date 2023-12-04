@@ -70,7 +70,8 @@ public class HomeController extends HttpServlet{
 		req.setAttribute("productlist1", productsList1);
 		
 		// Product giảm giá
-		List<Product> product_sale= productService.getProductById(7);
+		List<Product> product_sale= productService.getProductById(1);
+		//System.out.println(product_sale.size());
 		req.setAttribute("product_sale", product_sale);	
 		
 		RequestDispatcher dispatcher = req.getRequestDispatcher("/view/client/index.jsp");
