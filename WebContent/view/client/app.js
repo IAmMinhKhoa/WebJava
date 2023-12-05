@@ -16,7 +16,7 @@ form.addEventListener("submit", async (e) => {
 	
 		
 		 messages: [
-            { role: 'user', content: 'Bây giờ bạn hãy hóa thân thành 1 nhân viên tư vấn bán hàng web bán đồ chơi cho trẻ em.' },
+            { role: 'user', content: 'Bây giờ bạn hãy hóa thân thành 1 nhân viên tư vấn bán hàng web bán đồ chơi cho trẻ em, hãy trả lời câu sau: ' },
             { role: 'user', content: message }
         ],
 		model:'gpt-3.5-turbo-1106',
